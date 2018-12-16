@@ -1,0 +1,11 @@
+.user {
+  color: blue;
+}
+
+.vip {
+  color: red;
+}
+
+.loggedIn {
+  font-weight: bold;
+}
