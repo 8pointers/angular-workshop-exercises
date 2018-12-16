@@ -400,6 +400,192 @@
           }
         }
       }
+    },
+    "ex04-events": {
+      "root": "projects/ex04-events/",
+      "sourceRoot": "projects/ex04-events/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex04-events",
+            "index": "projects/ex04-events/src/index.html",
+            "main": "projects/ex04-events/src/main.ts",
+            "polyfills": "projects/ex04-events/src/polyfills.ts",
+            "tsConfig": "projects/ex04-events/tsconfig.app.json",
+            "assets": [
+              "projects/ex04-events/src/favicon.ico",
+              "projects/ex04-events/src/assets"
+            ],
+            "styles": ["projects/ex04-events/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex04-events/src/environments/environment.ts",
+                  "with": "projects/ex04-events/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex04-events:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex04-events:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex04-events:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex04-events/src/test.ts",
+            "polyfills": "projects/ex04-events/src/polyfills.ts",
+            "tsConfig": "projects/ex04-events/tsconfig.spec.json",
+            "karmaConfig": "projects/ex04-events/karma.conf.js",
+            "styles": ["projects/ex04-events/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex04-events/src/favicon.ico",
+              "projects/ex04-events/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex04-events/tsconfig.app.json",
+              "projects/ex04-events/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "ex05-data-binding": {
+      "root": "projects/ex05-data-binding/",
+      "sourceRoot": "projects/ex05-data-binding/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex05-data-binding",
+            "index": "projects/ex05-data-binding/src/index.html",
+            "main": "projects/ex05-data-binding/src/main.ts",
+            "polyfills": "projects/ex05-data-binding/src/polyfills.ts",
+            "tsConfig": "projects/ex05-data-binding/tsconfig.app.json",
+            "assets": [
+              "projects/ex05-data-binding/src/favicon.ico",
+              "projects/ex05-data-binding/src/assets"
+            ],
+            "styles": ["projects/ex05-data-binding/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex05-data-binding/src/environments/environment.ts",
+                  "with": "projects/ex05-data-binding/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex05-data-binding:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex05-data-binding:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex05-data-binding:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex05-data-binding/src/test.ts",
+            "polyfills": "projects/ex05-data-binding/src/polyfills.ts",
+            "tsConfig": "projects/ex05-data-binding/tsconfig.spec.json",
+            "karmaConfig": "projects/ex05-data-binding/karma.conf.js",
+            "styles": ["projects/ex05-data-binding/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex05-data-binding/src/favicon.ico",
+              "projects/ex05-data-binding/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex05-data-binding/tsconfig.app.json",
+              "projects/ex05-data-binding/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ex01-intro"

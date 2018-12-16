@@ -1,0 +1,8 @@
+<div>
+  <h1>05 - Data Binding</h1>
+  <h2>@Input</h2>
+  <app-demo-input [name]="'World'"></app-demo-input>
+  <app-demo-input [name]="name"></app-demo-input>
+  <h2>@Output</h2>
+  <app-demo-output (greetingRequested)="onGreeting($event)"></app-demo-output>
+</div>
