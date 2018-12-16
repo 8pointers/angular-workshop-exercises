@@ -214,6 +214,99 @@
           }
         }
       }
+    },
+    "ex02-component": {
+      "root": "projects/ex02-component/",
+      "sourceRoot": "projects/ex02-component/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex02-component",
+            "index": "projects/ex02-component/src/index.html",
+            "main": "projects/ex02-component/src/main.ts",
+            "polyfills": "projects/ex02-component/src/polyfills.ts",
+            "tsConfig": "projects/ex02-component/tsconfig.app.json",
+            "assets": [
+              "projects/ex02-component/src/favicon.ico",
+              "projects/ex02-component/src/assets"
+            ],
+            "styles": ["projects/ex02-component/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex02-component/src/environments/environment.ts",
+                  "with": "projects/ex02-component/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex02-component:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex02-component:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex02-component:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex02-component/src/test.ts",
+            "polyfills": "projects/ex02-component/src/polyfills.ts",
+            "tsConfig": "projects/ex02-component/tsconfig.spec.json",
+            "karmaConfig": "projects/ex02-component/karma.conf.js",
+            "styles": ["projects/ex02-component/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex02-component/src/favicon.ico",
+              "projects/ex02-component/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex02-component/tsconfig.app.json",
+              "projects/ex02-component/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ex01-intro"
