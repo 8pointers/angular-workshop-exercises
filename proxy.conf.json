@@ -1,0 +1,26 @@
+{
+  "/api/motd": {
+    "changeOrigin": true,
+    "target": "https://694y9v59lf.execute-api.eu-west-2.amazonaws.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/motd": "/latest/motd"
+    }
+  },
+  "/api/gameOfLife": {
+    "changeOrigin": true,
+    "target": "https://694y9v59lf.execute-api.eu-west-2.amazonaws.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/gameOfLife": "/latest/gameOfLife"
+    }
+  },
+  "/api/ipify": {
+    "changeOrigin": true,
+    "target": "https://api.ipify.org",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/ipify": ""
+    }
+  }
+}

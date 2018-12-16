@@ -586,6 +586,196 @@
           }
         }
       }
+    },
+    "ex06-forms": {
+      "root": "projects/ex06-forms/",
+      "sourceRoot": "projects/ex06-forms/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex06-forms",
+            "index": "projects/ex06-forms/src/index.html",
+            "main": "projects/ex06-forms/src/main.ts",
+            "polyfills": "projects/ex06-forms/src/polyfills.ts",
+            "tsConfig": "projects/ex06-forms/tsconfig.app.json",
+            "assets": [
+              "projects/ex06-forms/src/favicon.ico",
+              "projects/ex06-forms/src/assets"
+            ],
+            "styles": [
+              "projects/ex06-forms/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex06-forms/src/environments/environment.ts",
+                  "with": "projects/ex06-forms/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex06-forms:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex06-forms:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex06-forms:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex06-forms/src/test.ts",
+            "polyfills": "projects/ex06-forms/src/polyfills.ts",
+            "tsConfig": "projects/ex06-forms/tsconfig.spec.json",
+            "karmaConfig": "projects/ex06-forms/karma.conf.js",
+            "styles": ["projects/ex06-forms/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex06-forms/src/favicon.ico",
+              "projects/ex06-forms/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex06-forms/tsconfig.app.json",
+              "projects/ex06-forms/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "ex10-async": {
+      "root": "projects/ex10-async/",
+      "sourceRoot": "projects/ex10-async/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex10-async",
+            "index": "projects/ex10-async/src/index.html",
+            "main": "projects/ex10-async/src/main.ts",
+            "polyfills": "projects/ex10-async/src/polyfills.ts",
+            "tsConfig": "projects/ex10-async/tsconfig.app.json",
+            "assets": [
+              "projects/ex10-async/src/favicon.ico",
+              "projects/ex10-async/src/assets"
+            ],
+            "styles": ["projects/ex10-async/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex10-async/src/environments/environment.ts",
+                  "with": "projects/ex10-async/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex10-async:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex10-async:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex10-async:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex10-async/src/test.ts",
+            "polyfills": "projects/ex10-async/src/polyfills.ts",
+            "tsConfig": "projects/ex10-async/tsconfig.spec.json",
+            "karmaConfig": "projects/ex10-async/karma.conf.js",
+            "styles": ["projects/ex10-async/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex10-async/src/favicon.ico",
+              "projects/ex10-async/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex10-async/tsconfig.app.json",
+              "projects/ex10-async/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ex01-intro"

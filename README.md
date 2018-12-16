@@ -7,12 +7,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Starting development server:
 
 ```bash
-./node_modules/.bin/ng serve --project=ex01-intro
-```
-
-Or alternatively:
-
-```bash
 npm run-script start ex01-intro
 ```
 
