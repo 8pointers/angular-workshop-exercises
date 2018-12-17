@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
         [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }"
       >
         <div
-          *ngFor="let cell of getCells()"
+          *ngFor="let cell of cells"
           [ngClass]="{ cell: true, alive: cell.isAlive }"
           [ngStyle]="{
             top: height * cell.row + 'px',
@@ -25,15 +25,18 @@ import { Component } from '@angular/core';
   `
 })
 export class GameOfLifeComponent {
-  public n = 10;
-  public width = 20;
-  public height = 20;
+  n = 10;
+  width = 20;
+  height = 20;
 
-  public getCells() {
-    return Array.from({ length: this.n * this.n }, (value, index) => {
-      const row = Math.floor(index / this.n);
-      const column = index % this.n;
-      return { row, column, isAlive: (row + column) % 2 };
-    });
+  public get cells() {
+    return Array.from({ length: this.n * this.n }, (_, index) => ({
+      row: Math.floor(index / this.n),
+      column: index % this.n
+    })).map(({ row, column }) => ({
+      row,
+      column,
+      isAlive: (row + column) % 2
+    }));
   }
 }

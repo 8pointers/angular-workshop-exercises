@@ -14,7 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Quick Start
 
 ```bash
-git clone git@github.com:8pointers/angular-workshop-exercises.git
+git clone https://github.com/8pointers/angular-workshop-exercises.git
 cd angular-workshop-exercises
 npm install
 npm start
