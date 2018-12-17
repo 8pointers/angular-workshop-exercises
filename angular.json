@@ -684,6 +684,200 @@
         }
       }
     },
+    "ex07-routing": {
+      "root": "projects/ex07-routing/",
+      "sourceRoot": "projects/ex07-routing/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex07-routing",
+            "index": "projects/ex07-routing/src/index.html",
+            "main": "projects/ex07-routing/src/main.ts",
+            "polyfills": "projects/ex07-routing/src/polyfills.ts",
+            "tsConfig": "projects/ex07-routing/tsconfig.app.json",
+            "assets": [
+              "projects/ex07-routing/src/favicon.ico",
+              "projects/ex07-routing/src/assets"
+            ],
+            "styles": [
+              "projects/ex07-routing/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex07-routing/src/environments/environment.ts",
+                  "with": "projects/ex07-routing/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex07-routing:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex07-routing:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex07-routing:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex07-routing/src/test.ts",
+            "polyfills": "projects/ex07-routing/src/polyfills.ts",
+            "tsConfig": "projects/ex07-routing/tsconfig.spec.json",
+            "karmaConfig": "projects/ex07-routing/karma.conf.js",
+            "styles": ["projects/ex07-routing/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex07-routing/src/favicon.ico",
+              "projects/ex07-routing/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex07-routing/tsconfig.app.json",
+              "projects/ex07-routing/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "ex08-service": {
+      "root": "projects/ex08-service/",
+      "sourceRoot": "projects/ex08-service/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex08-service",
+            "index": "projects/ex08-service/src/index.html",
+            "main": "projects/ex08-service/src/main.ts",
+            "polyfills": "projects/ex08-service/src/polyfills.ts",
+            "tsConfig": "projects/ex08-service/tsconfig.app.json",
+            "assets": [
+              "projects/ex08-service/src/favicon.ico",
+              "projects/ex08-service/src/assets"
+            ],
+            "styles": [
+              "projects/ex08-service/src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex08-service/src/environments/environment.ts",
+                  "with": "projects/ex08-service/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex08-service:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex08-service:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex08-service:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex08-service/src/test.ts",
+            "polyfills": "projects/ex08-service/src/polyfills.ts",
+            "tsConfig": "projects/ex08-service/tsconfig.spec.json",
+            "karmaConfig": "projects/ex08-service/karma.conf.js",
+            "styles": ["projects/ex08-service/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex08-service/src/favicon.ico",
+              "projects/ex08-service/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex08-service/tsconfig.app.json",
+              "projects/ex08-service/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
     "ex09-directive": {
       "root": "projects/ex09-directive/",
       "sourceRoot": "projects/ex09-directive/src",

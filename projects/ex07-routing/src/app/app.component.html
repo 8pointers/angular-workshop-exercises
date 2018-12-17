@@ -1,6 +1,11 @@
-<div>
-  <h1>02 - Components</h1>
-  <h2>HelloWorld</h2>
-  <app-hello-world></app-hello-world>
-  <h2>Exercise 1 - MessageOfTheDay</h2>
-</div>
+<header>
+  <ul>
+    <li><a [routerLink]="['helloWorld']">Hello World</a></li>
+    <li><a [routerLink]="['clickCounter']">Click Counter</a></li>
+  </ul>
+</header>
+<main>
+  <h1>07 - Routing</h1>
+  <router-outlet></router-outlet>
+</main>
+<footer>09 Routing</footer>
