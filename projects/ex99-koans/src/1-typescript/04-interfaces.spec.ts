@@ -12,7 +12,7 @@ describe('Typescript - interfaces', function() {
     expect(greet({ name: 'John', age: 23 } as Person)).toBe(__);
     // expect(greet({nema: 'John', age: 23} as Person)).toBe(__);
 
-    let p = { name: 'John', age: 23 };
+    const p = { name: 'John', age: 23 };
     expect(greet(p)).toBe(__);
   });
   it('index signatures', function() {

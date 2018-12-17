@@ -1,12 +1,12 @@
 describe('Typescript - functions', function() {
   const __: any = 'replace me so that the test is passing';
   it('should understand lambdas', function() {
-    let person1 = {
+    const person1 = {
       firstName: '',
       lastName: '',
       setName: function(name: string) {
-        let names = name.split(' ');
-        let setFirstAndLastName = function(
+        const names = name.split(' ');
+        const setFirstAndLastName = function(
           firstName: string,
           lastName: string
         ) {
@@ -24,12 +24,12 @@ describe('Typescript - functions', function() {
     expect(person1.firstName).toBe(__);
     expect(person1.lastName).toBe(__);
 
-    let person2 = {
+    const person2 = {
       firstName: '',
       lastName: '',
       setName: function(name: string) {
-        let names = name.split(' ');
-        let setFirstAndLastName = (firstName: string, lastName: string) => {
+        const names = name.split(' ');
+        const setFirstAndLastName = (firstName: string, lastName: string) => {
           this.firstName = firstName;
           this.lastName = lastName;
         };
@@ -58,9 +58,8 @@ describe('Typescript - functions', function() {
     // expect(inc({age: 10})).toEqual(__);
   });
   it('functional extensions arrays', function() {
-    let d = 2,
-      result: number[];
-    result = Array.from({ length: Math.pow(6, d) }, (n, i) => i)
+    const d = 2;
+    const result = Array.from({ length: Math.pow(6, d) }, (n, i) => i)
       .map(n => parseInt(n.toString(6), 10))
       .map(function(n: number) {
         let sum = d;

@@ -22,7 +22,7 @@ describe('Typescript - classes', function() {
     expect(Person.count).toBe(__);
   });
   it('have constructor, properties, methods', function() {
-    let p = new Person('John');
+    const p = new Person('John');
     expect(p.greet()).toBe(__);
   });
   it('support inheritance', function() {
@@ -55,7 +55,7 @@ describe('Typescript - classes', function() {
         return 'Here is a part of my secret: ' + this.secret.substring(0, 4);
       }
     }
-    let s = new Spy('Mr X');
+    const s = new Spy('Mr X');
     expect(s.speak()).toBe(__);
     expect(s.name).toBe(__);
     // expect(s.secret).toBe(__);
@@ -70,9 +70,9 @@ describe('Typescript - classes', function() {
         return `Hello ${this.name}!`;
       }
     }
-    let p = new Person('John');
+    const p = new Person('John');
     expect(p.sayHello()).toBe(__);
-    let setName = p.setName;
+    const setName = p.setName;
     setName('Paul');
     expect(p.sayHello()).toBe(__);
     expect(window.name).toBe(__);

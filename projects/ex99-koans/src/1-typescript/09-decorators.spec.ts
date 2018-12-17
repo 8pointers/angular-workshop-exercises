@@ -6,7 +6,7 @@ describe('Decorators', function() {
       propertyName: string,
       descriptor: TypedPropertyDescriptor<Function>
     ) {
-      let method = descriptor.value;
+      const method = descriptor.value;
       descriptor.value = function() {
         console.log.apply(
           console,
@@ -23,7 +23,7 @@ describe('Decorators', function() {
         return 'Hello ' + name;
       }
     }
-    let p = new Person();
+    const p = new Person();
     expect(p.reply('John')).toBe(__);
   });
   it('has decorator factories', function() {
@@ -33,11 +33,11 @@ describe('Decorators', function() {
         propertyName: string,
         descriptor: TypedPropertyDescriptor<Function>
       ) {
-        let method = descriptor.value;
+        const method = descriptor.value;
         descriptor.value = function() {
-          let tsStart = Date.now();
-          let result = method.apply(this, arguments);
-          let duration = Date.now() - tsStart;
+          const tsStart = Date.now();
+          const result = method.apply(this, arguments);
+          const duration = Date.now() - tsStart;
           if (duration > durationInMillis) {
             console.log(
               'Slow method invocation:',
@@ -59,13 +59,13 @@ describe('Decorators', function() {
 
       @slow(100)
       shouldBeSlow() {
-        let tsEnd = Date.now() + 101;
+        const tsEnd = Date.now() + 101;
         while (Date.now() < tsEnd) {}
         return 'slow';
       }
     }
 
-    let p = new Person();
+    const p = new Person();
     expect(p.shouldBeQuick()).toBe(__);
     expect(p.shouldBeSlow()).toBe(__);
   });

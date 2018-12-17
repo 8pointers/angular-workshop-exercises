@@ -11,6 +11,9 @@ this.items = [
 ];
 ```
 
+Make sure that the items are sorted by price.
+Also, compute and display the total price.
+
 ## Exercise 2
 
 Implement a app-game-of-life component that displays a 10x10 Game of Life board with "Next" button.

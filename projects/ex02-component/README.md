@@ -1,6 +1,10 @@
 ## Exercise 1
 
-Implement and wire a component that displays a random message of the day (from a predefined list of messages)
+Implement a component that shows the current time when page is rendered (i.e. it doesn't have to update automatically).
+
+## Exercise 2
+
+Implement a component that displays a random message of the day (from a predefined list of messages):
 
 ```javascript
 const messages = [
@@ -12,3 +16,5 @@ const messages = [
   'Good design adds value faster than it adds cost.'
 ];
 ```
+
+Render your component on the homepage.

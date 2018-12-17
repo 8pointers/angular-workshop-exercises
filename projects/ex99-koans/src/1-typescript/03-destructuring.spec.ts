@@ -1,7 +1,7 @@
 describe('TypeScript - destructuring', function() {
   const __: any = 'replace me so that the test is passing';
   it('works with arrays', function() {
-    let myArray = ['first', 'second'];
+    const myArray = ['first', 'second'];
     let [first, second] = myArray;
     expect(first).toBe(__);
     expect(second).toBe(__);
@@ -10,7 +10,7 @@ describe('TypeScript - destructuring', function() {
     expect(first).toBe(__);
     expect(second).toBe(__);
 
-    let [head, ...rest] = myArray;
+    const [head, ...rest] = myArray;
     expect(head).toBe(__);
     expect(rest).toEqual(__);
   });
@@ -21,20 +21,19 @@ describe('TypeScript - destructuring', function() {
     expect(dist([3, 4])).toBe(__);
   });
   it('works with objects', function() {
-    let person = {
+    const person = {
       firstName: 'Hello',
       lastName: 'World'
     };
-    let { firstName, lastName } = person;
+    const { firstName, lastName } = person;
     expect(firstName).toBe(__);
     expect(lastName).toBe(__);
 
-    let { firstName: first, lastName: last } = person;
+    const { firstName: first, lastName: last } = person;
     expect(first).toBe(__);
     expect(last).toBe(__);
 
-    (function(p: any) {
-      let { name, title = 'N/A' } = p;
+    (function({ name, title = 'N/A' }: any) {
       expect(name).toBe(__);
       expect(title).toBe(__);
     })({ name: 'My Name' });
