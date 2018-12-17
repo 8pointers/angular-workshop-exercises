@@ -18,6 +18,7 @@ import { Component } from '@angular/core';
             width: width + 'px',
             height: height + 'px'
           }"
+          (click)="toggle(cell.row, cell.column)"
         ></div>
       </div>
       <button class="tick">Next</button>
@@ -28,12 +29,11 @@ export class GameOfLifeComponent {
   public n = 10;
   public width = 20;
   public height = 20;
-
   public getCells() {
-    return Array.from({ length: this.n * this.n }, (value, index) => {
-      const row = Math.floor(index / this.n);
-      const column = index % this.n;
-      return { row, column, isAlive: (row + column) % 2 };
-    });
+    return Array.from({ length: this.n * this.n }, (_, index) => ({
+      row: Math.floor(index / this.n),
+      column: index % this.n,
+      isAlive: false
+    }));
   }
 }

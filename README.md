@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
+## Prerequisites
+
+- git client
+- NodeJS 10.14.2+ & NPM 6.4.1+
+- Recommended Visual Studio Code extensions:
+  - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  - [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ## Quick Start
 
 ```bash
