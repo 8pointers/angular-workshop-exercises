@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
+## Quick Start
+
+```bash
+git clone git@github.com:8pointers/angular-workshop-exercises.git
+cd angular-workshop-exercises
+npm install
+npm start
+```
+
 ## Development server
 
 Starting development server:
