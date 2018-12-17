@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+const cellKey = (row, column) => `${row}_${column}`;
+
 @Component({
   selector: 'app-game-of-life',
   styleUrls: ['./game-of-life.component.css'],
@@ -10,15 +12,15 @@ import { Component } from '@angular/core';
         [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }"
       >
         <div
-          *ngFor="let cell of getCells()"
+          *ngFor="let cell of cells"
           [ngClass]="{ cell: true, alive: cell.isAlive }"
           [ngStyle]="{
             top: height * cell.row + 'px',
-            left: height * cell.column + 'px',
+            left: width * cell.column + 'px',
             width: width + 'px',
             height: height + 'px'
           }"
-          (click)="toggle(cell.row, cell.column)"
+          (click)="toggleCellState(cell.row, cell.column)"
         ></div>
       </div>
       <button class="tick">Next</button>
@@ -26,14 +28,32 @@ import { Component } from '@angular/core';
   `
 })
 export class GameOfLifeComponent {
-  public n = 10;
-  public width = 20;
-  public height = 20;
-  public getCells() {
+  n = 10;
+  width = 20;
+  height = 20;
+  isAlive = {};
+
+  isCellAlive(row, column) {
+    return this.isAlive[cellKey(row, column)] || false;
+  }
+
+  toggleCellState(row, column) {
+    const key = cellKey(row, column);
+    if (this.isAlive[key]) {
+      delete this.isAlive[key];
+    } else {
+      this.isAlive[key] = true;
+    }
+  }
+
+  get cells() {
     return Array.from({ length: this.n * this.n }, (_, index) => ({
       row: Math.floor(index / this.n),
-      column: index % this.n,
-      isAlive: false
+      column: index % this.n
+    })).map(({ row, column }) => ({
+      row,
+      column,
+      isAlive: this.isCellAlive(row, column)
     }));
   }
 }
