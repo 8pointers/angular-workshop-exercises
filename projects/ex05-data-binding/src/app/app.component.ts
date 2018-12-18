@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Another World';
+  aBitLater = new Date(Date.now() + 10000);
   onGreeting(message) {
     this.name += message;
   }
