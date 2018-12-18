@@ -4,9 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GameOfLifeComponent } from './game-of-life/game-of-life.component';
 import { LoginComponent } from './login/login.component';
+import { TodoComponent, TodoItemComponent } from './todo/todo.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, GameOfLifeComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    GameOfLifeComponent,
+    TodoComponent,
+    TodoItemComponent
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
