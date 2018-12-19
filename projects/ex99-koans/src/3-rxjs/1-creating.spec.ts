@@ -1,9 +1,10 @@
 import { from, fromEvent, interval, Observable, range } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
 
 const __: any = 'replace me so that the test is passing';
 
 describe('Creating observables', function() {
-  fit('should understand Observable.create', function() {
+  it('should understand Observable.create', function() {
     const o$ = Observable.create(function(subscriber) {
       subscriber.next('First');
       subscriber.next('Second');
@@ -65,5 +66,18 @@ describe('Creating observables', function() {
       expect(result).toEqual(__);
       done();
     }, 500);
+  });
+  it('should understand ajax', function(done) {
+    const o$ = ajax.getJSON('assets/player/1.json');
+    const result = [];
+    o$.subscribe(
+      value => result.push(value),
+      error => result.push(error),
+      () => {
+        result.push('complete');
+        expect(result).toEqual(__);
+        done();
+      }
+    );
   });
 });
