@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 const cellKey = (row, column) => `${row}_${column}`;
+// prettier-ignore
+const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 3) - 1, i === 4 ? 0 : 1]);
 
 @Component({
   selector: 'app-game-of-life',
@@ -49,46 +51,17 @@ export class GameOfLifeComponent {
     }
   }
 
+  // prettier-ignore
   tick() {
-    const numberOfNeighbours = {};
-    let parts, row, column, neighbourKey;
-    for (const key in this.isAlive) {
-      if (this.isAlive.hasOwnProperty(key)) {
-        parts = key.split('_');
-        row = parseInt(parts[0], 10);
-        column = parseInt(parts[1], 10);
-        numberOfNeighbours[key] = numberOfNeighbours[key] || 0;
-        [
-          [-1, -1],
-          [-1, 0],
-          [-1, 1],
-          [0, -1],
-          [0, 1],
-          [1, -1],
-          [1, 0],
-          [1, 1]
-        ].forEach(offset => {
-          neighbourKey = cellKey(row + offset[0], column + offset[1]);
-          numberOfNeighbours[neighbourKey] =
-            (numberOfNeighbours[neighbourKey] || 0) + 1;
-        });
-      }
-    }
-    for (const key in numberOfNeighbours) {
-      if (numberOfNeighbours.hasOwnProperty(key)) {
-        const shouldDie =
-          this.isAlive[key] &&
-          (numberOfNeighbours[key] < 2 || numberOfNeighbours[key] > 3);
-        const shouldResurrect =
-          !this.isAlive[key] && numberOfNeighbours[key] === 3;
-        if (shouldDie || shouldResurrect) {
-          parts = key.split('_');
-          row = parseInt(parts[0], 10);
-          column = parseInt(parts[1], 10);
-          this.toggleCellState(row, column);
-        }
-      }
-    }
+    const neighbours = Object.keys(this.isAlive)
+      .map(k => k.split('_').map(p => parseInt(p, 10)))
+      .map(([row, col]) => deltas.map(([r, c, n]) => [row + r, col + c, n]))
+      .reduce((acc, arr) => [...acc, ...arr], [])
+      .map(([row, column, dn]) => [`${row}_${column}`, dn])
+      .reduce((acc, [k, dn]) => ({ ...acc, [k]: (acc[k] || 0) + dn }), {});
+    this.isAlive = Object.keys(neighbours)
+      .filter(k => (this.isAlive[k] && neighbours[k] === 2) || neighbours[k] === 3)
+      .reduce((result, key) => ({ ...result, [key]: true }), {});
   }
 
   get cells() {

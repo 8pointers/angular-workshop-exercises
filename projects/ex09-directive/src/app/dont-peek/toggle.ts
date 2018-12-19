@@ -1,5 +1,11 @@
-import { Directive, ElementRef, EventEmitter, HostListener, Injectable, Input } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import {
+  Directive,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Injectable,
+  Input
+} from '@angular/core';
 
 @Injectable()
 export class ToggleService {
@@ -20,7 +26,7 @@ export class ToggleableDirective {
   @Input('appToggleableClass')
   appToggleableClass: string;
 
-  constructor(private toggleService: ToggleService, el: ElementRef) {
+  constructor(toggleService: ToggleService, el: ElementRef) {
     toggleService.toggler.subscribe(what => {
       if (this.appToggleable === what) {
         el.nativeElement.classList.toggle(this.appToggleableClass);
@@ -36,8 +42,7 @@ export class ToggleDirective {
   @Input('appToggle')
   appToggle: string;
 
-  constructor(private toggleService: ToggleService) {
-  }
+  constructor(private toggleService: ToggleService) {}
 
   @HostListener('click')
   toggle() {
