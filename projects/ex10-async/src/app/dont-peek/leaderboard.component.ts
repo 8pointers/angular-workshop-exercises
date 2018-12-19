@@ -1,13 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Injectable, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
+import { flatMap, map } from 'rxjs/operators';
 
 @Injectable()
 export class LeaderboardService {
   constructor(private http: HttpClient) {}
 
   getPlayer(id: number): Promise<any> {
-    return fetch(`assets/player/${id}.json`).then(response => response.json());
+    return fetch(`assets/player/${id}.json`)
+      .then(response => response.json())
+      .then(player => ({ id, ...player }));
   }
 
   getLeaderboard(): Promise<any[]> {
@@ -15,12 +18,15 @@ export class LeaderboardService {
   }
 
   getLeaderboardWithPlayers1(): Promise<any[]> {
-    // TODO
-    return null;
+    return this.getLeaderboard()
+      .then(leaderboard => leaderboard.map(p => this.getPlayer(p.id)))
+      .then(pp => Promise.all(pp));
   }
 
   getPlayer2(id: number): Observable<any> {
-    return this.http.get<any>(`assets/player/${id}.json`);
+    return this.http
+      .get<any>(`assets/player/${id}.json`)
+      .pipe(map(player => ({ id, ...player })));
   }
 
   getLeaderboard2(): Observable<any[]> {
@@ -28,8 +34,11 @@ export class LeaderboardService {
   }
 
   getLeaderboardWithPlayers2(): Observable<any[]> {
-    // TODO
-    return null;
+    return this.getLeaderboard2().pipe(
+      flatMap(leaderboard =>
+        forkJoin(...leaderboard.map(p => this.getPlayer2(p.id)))
+      )
+    );
   }
 }
 
