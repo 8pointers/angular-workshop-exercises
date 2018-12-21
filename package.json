@@ -1,15 +1,24 @@
 {
   "name": "angular-workshop-exercises",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Exercises for the Modern web apps with Angular and TypeScript workshop",
+  "keywords": [
+    "TypeScript",
+    "Angular",
+    "RxJS",
+    "NgRx"
+  ],
+  "license": "UNLICENSED",
+  "author": "Damjan Vujnovic",
   "scripts": {
     "ng": "ng",
+    "generate": "ng generate",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",
@@ -19,8 +28,8 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
-    "@ngrx/effects": "^6.1.2",
-    "@ngrx/store": "^6.1.2",
+    "@ngrx/effects": "^7.0.0",
+    "@ngrx/store": "^7.0.0",
     "bootstrap": "^4.1.3",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
@@ -46,9 +55,10 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.11.0",
+    "tslint": "~5.12.0",
     "typescript": "~3.1.6"
   },
+  "private": true,
   "prettier": {
     "singleQuote": true
   }

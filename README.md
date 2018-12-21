@@ -1,6 +1,6 @@
 # Angular Workshop Exercises
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 Creating a new component:
 
 ```bash
-./node_modules/.bin/ng generate component message-of-the-day --project=ex02-component
+npm run-script generate component message-of-the-day -- --project=ex02-component
 ```
 
 ## Build
@@ -43,7 +43,7 @@ Creating a new component:
 Building a project:
 
 ```bash
-./node_modules/.bin/ng build --project=ex01-intro --prod=true
+npm run-script build ex02-component -- --prod=true
 ```
 
 The build artifacts will be stored in the `dist/` directory.
@@ -53,7 +53,7 @@ The build artifacts will be stored in the `dist/` directory.
 Running unit tests via [Karma](https://karma-runner.github.io):
 
 ```bash
-./node_modules/.bin/ng test --project=ex01-intro
+npm run-script test ex99-koans
 ```
 
 ## Running end-to-end tests

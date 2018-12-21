@@ -1157,6 +1157,99 @@
         }
       }
     },
+    "ex12-ngrx-effects": {
+      "root": "projects/ex12-ngrx-effects/",
+      "sourceRoot": "projects/ex12-ngrx-effects/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex12-ngrx-effects",
+            "index": "projects/ex12-ngrx-effects/src/index.html",
+            "main": "projects/ex12-ngrx-effects/src/main.ts",
+            "polyfills": "projects/ex12-ngrx-effects/src/polyfills.ts",
+            "tsConfig": "projects/ex12-ngrx-effects/tsconfig.app.json",
+            "assets": [
+              "projects/ex12-ngrx-effects/src/favicon.ico",
+              "projects/ex12-ngrx-effects/src/assets"
+            ],
+            "styles": ["projects/ex12-ngrx-effects/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex12-ngrx-effects/src/environments/environment.ts",
+                  "with": "projects/ex12-ngrx-effects/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex12-ngrx-effects:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex12-ngrx-effects:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex12-ngrx-effects:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex12-ngrx-effects/src/test.ts",
+            "polyfills": "projects/ex12-ngrx-effects/src/polyfills.ts",
+            "tsConfig": "projects/ex12-ngrx-effects/tsconfig.spec.json",
+            "karmaConfig": "projects/ex12-ngrx-effects/karma.conf.js",
+            "styles": ["projects/ex12-ngrx-effects/src/styles.css"],
+            "scripts": [],
+            "assets": [
+              "projects/ex12-ngrx-effects/src/favicon.ico",
+              "projects/ex12-ngrx-effects/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ex12-ngrx-effects/tsconfig.app.json",
+              "projects/ex12-ngrx-effects/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
     "ex99-koans": {
       "root": "projects/ex99-koans/",
       "sourceRoot": "projects/ex99-koans/src",
