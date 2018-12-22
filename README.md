@@ -53,7 +53,7 @@ The build artifacts will be stored in the `dist/` directory.
 Running unit tests via [Karma](https://karma-runner.github.io):
 
 ```bash
-npm run-script test ex99-koans
+npm test ex99-koans
 ```
 
 ## Running end-to-end tests
