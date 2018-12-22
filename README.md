@@ -25,7 +25,7 @@ npm start
 Starting development server:
 
 ```bash
-npm run-script start ex01-intro
+npm start ex02-component
 ```
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
