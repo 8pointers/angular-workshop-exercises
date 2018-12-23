@@ -6,16 +6,29 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter.component';
 import { counterReducer } from './counter/counter.reducer';
+import { CellsPipe } from './game-of-life/cells.pipe';
+import { GameOfLifeComponent } from './game-of-life/game-of-life.component';
+import { gameOfLifeReducer } from './game-of-life/game-of-life.reducer';
 import { MotdComponent } from './motd/motd.component';
 import { MotdEffects } from './motd/motd.effects';
 import { motdReducer } from './motd/motd.reducer';
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent, MotdComponent],
+  declarations: [
+    AppComponent,
+    CounterComponent,
+    MotdComponent,
+    GameOfLifeComponent,
+    CellsPipe
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    StoreModule.forRoot({ counter: counterReducer, message: motdReducer }),
+    StoreModule.forRoot({
+      counter: counterReducer,
+      gameOfLife: gameOfLifeReducer,
+      message: motdReducer
+    }),
     EffectsModule.forRoot([MotdEffects])
   ],
   providers: [],
