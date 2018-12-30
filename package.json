@@ -60,6 +60,7 @@
   },
   "private": true,
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 140
   }
 }

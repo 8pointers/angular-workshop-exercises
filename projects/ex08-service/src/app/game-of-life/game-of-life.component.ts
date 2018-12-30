@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 const cellKey = (row, column) => `${row}_${column}`;
-// prettier-ignore
+
 const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 3) - 1, i === 4 ? 0 : 1]);
 
 @Component({
@@ -9,10 +9,7 @@ const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 
   styleUrls: ['./game-of-life.component.css'],
   template: `
     <div>
-      <div
-        class="grid"
-        [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }"
-      >
+      <div class="grid" [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }">
         <div
           *ngFor="let cell of cells"
           [ngClass]="{ cell: true, alive: cell.isAlive }"
@@ -47,21 +44,18 @@ export class GameOfLifeComponent {
     if (this.isAlive[key]) {
       delete this.isAlive[key];
     } else {
-      this.isAlive[key] = true;
+      this.isAlive[key] = [row, column];
     }
   }
 
   // prettier-ignore
   tick() {
-    const neighbours = Object.keys(this.isAlive)
-      .map(k => k.split('_').map(p => parseInt(p, 10)))
-      .map(([row, col]) => deltas.map(([r, c, n]) => [row + r, col + c, n]))
-      .reduce((acc, arr) => [...acc, ...arr], [])
-      .map(([row, column, dn]) => [`${row}_${column}`, dn])
-      .reduce((acc, [k, dn]) => ({ ...acc, [k]: (acc[k] || 0) + dn }), {});
-    this.isAlive = Object.keys(neighbours)
-      .filter(k => (this.isAlive[k] && neighbours[k] === 2) || neighbours[k] === 3)
-      .reduce((result, key) => ({ ...result, [key]: true }), {});
+    const neighbours = Object.values(this.isAlive)
+      .flatMap(([row, col]) => deltas.map(([r, c, n]) => [cellKey(row + r, col + c), row + r, col + c, n]))
+      .reduce((acc, [key, row, col, n]) => ({ ...acc, [key]: { key, row, col, count: ((acc[key] && acc[key].count) || 0) + n } }), {});
+    this.isAlive = Object.values(neighbours)
+      .filter(({ key, count }) => (this.isAlive[key] && count === 2) || count === 3)
+      .reduce((result, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
   }
 
   get cells() {
