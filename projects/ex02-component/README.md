@@ -1,6 +1,6 @@
 ## Exercise 1
 
-Implement a component that shows the current time when page is rendered (i.e. it doesn't have to update automatically).
+Implement a component that shows the current time when page is rendered (it doesn't have to update automatically).
 
 ## Exercise 2
 
