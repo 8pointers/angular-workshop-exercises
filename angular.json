@@ -18,10 +18,7 @@
             "main": "projects/ex00-new/src/main.ts",
             "polyfills": "projects/ex00-new/src/polyfills.ts",
             "tsConfig": "projects/ex00-new/tsconfig.app.json",
-            "assets": [
-              "projects/ex00-new/src/favicon.ico",
-              "projects/ex00-new/src/assets"
-            ],
+            "assets": ["projects/ex00-new/src/favicon.ico", "projects/ex00-new/src/assets"],
             "styles": ["projects/ex00-new/src/styles.css"],
             "scripts": []
           },
@@ -78,19 +75,13 @@
             "karmaConfig": "projects/ex00-new/karma.conf.js",
             "styles": ["projects/ex00-new/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex00-new/src/favicon.ico",
-              "projects/ex00-new/src/assets"
-            ]
+            "assets": ["projects/ex00-new/src/favicon.ico", "projects/ex00-new/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex00-new/tsconfig.app.json",
-              "projects/ex00-new/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex00-new/tsconfig.app.json", "projects/ex00-new/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -137,10 +128,7 @@
             "main": "projects/ex01-intro/src/main.ts",
             "polyfills": "projects/ex01-intro/src/polyfills.ts",
             "tsConfig": "projects/ex01-intro/tsconfig.app.json",
-            "assets": [
-              "projects/ex01-intro/src/favicon.ico",
-              "projects/ex01-intro/src/assets"
-            ],
+            "assets": ["projects/ex01-intro/src/favicon.ico", "projects/ex01-intro/src/assets"],
             "styles": ["projects/ex01-intro/src/styles.css"],
             "scripts": []
           },
@@ -197,19 +185,13 @@
             "karmaConfig": "projects/ex01-intro/karma.conf.js",
             "styles": ["projects/ex01-intro/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex01-intro/src/favicon.ico",
-              "projects/ex01-intro/src/assets"
-            ]
+            "assets": ["projects/ex01-intro/src/favicon.ico", "projects/ex01-intro/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex01-intro/tsconfig.app.json",
-              "projects/ex01-intro/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex01-intro/tsconfig.app.json", "projects/ex01-intro/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -230,10 +212,7 @@
             "main": "projects/ex02-component/src/main.ts",
             "polyfills": "projects/ex02-component/src/polyfills.ts",
             "tsConfig": "projects/ex02-component/tsconfig.app.json",
-            "assets": [
-              "projects/ex02-component/src/favicon.ico",
-              "projects/ex02-component/src/assets"
-            ],
+            "assets": ["projects/ex02-component/src/favicon.ico", "projects/ex02-component/src/assets"],
             "styles": ["projects/ex02-component/src/styles.css"],
             "scripts": []
           },
@@ -290,19 +269,13 @@
             "karmaConfig": "projects/ex02-component/karma.conf.js",
             "styles": ["projects/ex02-component/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex02-component/src/favicon.ico",
-              "projects/ex02-component/src/assets"
-            ]
+            "assets": ["projects/ex02-component/src/favicon.ico", "projects/ex02-component/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex02-component/tsconfig.app.json",
-              "projects/ex02-component/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex02-component/tsconfig.app.json", "projects/ex02-component/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -323,10 +296,7 @@
             "main": "projects/ex03-built-in-directives/src/main.ts",
             "polyfills": "projects/ex03-built-in-directives/src/polyfills.ts",
             "tsConfig": "projects/ex03-built-in-directives/tsconfig.app.json",
-            "assets": [
-              "projects/ex03-built-in-directives/src/favicon.ico",
-              "projects/ex03-built-in-directives/src/assets"
-            ],
+            "assets": ["projects/ex03-built-in-directives/src/favicon.ico", "projects/ex03-built-in-directives/src/assets"],
             "styles": ["projects/ex03-built-in-directives/src/styles.css"],
             "scripts": []
           },
@@ -383,19 +353,13 @@
             "karmaConfig": "projects/ex03-built-in-directives/karma.conf.js",
             "styles": ["projects/ex03-built-in-directives/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex03-built-in-directives/src/favicon.ico",
-              "projects/ex03-built-in-directives/src/assets"
-            ]
+            "assets": ["projects/ex03-built-in-directives/src/favicon.ico", "projects/ex03-built-in-directives/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex03-built-in-directives/tsconfig.app.json",
-              "projects/ex03-built-in-directives/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex03-built-in-directives/tsconfig.app.json", "projects/ex03-built-in-directives/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -416,10 +380,7 @@
             "main": "projects/ex04-events/src/main.ts",
             "polyfills": "projects/ex04-events/src/polyfills.ts",
             "tsConfig": "projects/ex04-events/tsconfig.app.json",
-            "assets": [
-              "projects/ex04-events/src/favicon.ico",
-              "projects/ex04-events/src/assets"
-            ],
+            "assets": ["projects/ex04-events/src/favicon.ico", "projects/ex04-events/src/assets"],
             "styles": ["projects/ex04-events/src/styles.css"],
             "scripts": []
           },
@@ -476,19 +437,13 @@
             "karmaConfig": "projects/ex04-events/karma.conf.js",
             "styles": ["projects/ex04-events/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex04-events/src/favicon.ico",
-              "projects/ex04-events/src/assets"
-            ]
+            "assets": ["projects/ex04-events/src/favicon.ico", "projects/ex04-events/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex04-events/tsconfig.app.json",
-              "projects/ex04-events/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex04-events/tsconfig.app.json", "projects/ex04-events/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -509,10 +464,7 @@
             "main": "projects/ex05-data-binding/src/main.ts",
             "polyfills": "projects/ex05-data-binding/src/polyfills.ts",
             "tsConfig": "projects/ex05-data-binding/tsconfig.app.json",
-            "assets": [
-              "projects/ex05-data-binding/src/favicon.ico",
-              "projects/ex05-data-binding/src/assets"
-            ],
+            "assets": ["projects/ex05-data-binding/src/favicon.ico", "projects/ex05-data-binding/src/assets"],
             "styles": ["projects/ex05-data-binding/src/styles.css"],
             "scripts": []
           },
@@ -569,19 +521,13 @@
             "karmaConfig": "projects/ex05-data-binding/karma.conf.js",
             "styles": ["projects/ex05-data-binding/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex05-data-binding/src/favicon.ico",
-              "projects/ex05-data-binding/src/assets"
-            ]
+            "assets": ["projects/ex05-data-binding/src/favicon.ico", "projects/ex05-data-binding/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex05-data-binding/tsconfig.app.json",
-              "projects/ex05-data-binding/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex05-data-binding/tsconfig.app.json", "projects/ex05-data-binding/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -602,10 +548,7 @@
             "main": "projects/ex06-forms/src/main.ts",
             "polyfills": "projects/ex06-forms/src/polyfills.ts",
             "tsConfig": "projects/ex06-forms/tsconfig.app.json",
-            "assets": [
-              "projects/ex06-forms/src/favicon.ico",
-              "projects/ex06-forms/src/assets"
-            ],
+            "assets": ["projects/ex06-forms/src/favicon.ico", "projects/ex06-forms/src/assets"],
             "styles": [
               "projects/ex06-forms/src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
@@ -666,19 +609,13 @@
             "karmaConfig": "projects/ex06-forms/karma.conf.js",
             "styles": ["projects/ex06-forms/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex06-forms/src/favicon.ico",
-              "projects/ex06-forms/src/assets"
-            ]
+            "assets": ["projects/ex06-forms/src/favicon.ico", "projects/ex06-forms/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex06-forms/tsconfig.app.json",
-              "projects/ex06-forms/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex06-forms/tsconfig.app.json", "projects/ex06-forms/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -699,10 +636,7 @@
             "main": "projects/ex07-routing/src/main.ts",
             "polyfills": "projects/ex07-routing/src/polyfills.ts",
             "tsConfig": "projects/ex07-routing/tsconfig.app.json",
-            "assets": [
-              "projects/ex07-routing/src/favicon.ico",
-              "projects/ex07-routing/src/assets"
-            ],
+            "assets": ["projects/ex07-routing/src/favicon.ico", "projects/ex07-routing/src/assets"],
             "styles": [
               "projects/ex07-routing/src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
@@ -763,19 +697,13 @@
             "karmaConfig": "projects/ex07-routing/karma.conf.js",
             "styles": ["projects/ex07-routing/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex07-routing/src/favicon.ico",
-              "projects/ex07-routing/src/assets"
-            ]
+            "assets": ["projects/ex07-routing/src/favicon.ico", "projects/ex07-routing/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex07-routing/tsconfig.app.json",
-              "projects/ex07-routing/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex07-routing/tsconfig.app.json", "projects/ex07-routing/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -796,10 +724,7 @@
             "main": "projects/ex08-service/src/main.ts",
             "polyfills": "projects/ex08-service/src/polyfills.ts",
             "tsConfig": "projects/ex08-service/tsconfig.app.json",
-            "assets": [
-              "projects/ex08-service/src/favicon.ico",
-              "projects/ex08-service/src/assets"
-            ],
+            "assets": ["projects/ex08-service/src/favicon.ico", "projects/ex08-service/src/assets"],
             "styles": [
               "projects/ex08-service/src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
@@ -860,19 +785,13 @@
             "karmaConfig": "projects/ex08-service/karma.conf.js",
             "styles": ["projects/ex08-service/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex08-service/src/favicon.ico",
-              "projects/ex08-service/src/assets"
-            ]
+            "assets": ["projects/ex08-service/src/favicon.ico", "projects/ex08-service/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex08-service/tsconfig.app.json",
-              "projects/ex08-service/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex08-service/tsconfig.app.json", "projects/ex08-service/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -893,10 +812,7 @@
             "main": "projects/ex09-directive/src/main.ts",
             "polyfills": "projects/ex09-directive/src/polyfills.ts",
             "tsConfig": "projects/ex09-directive/tsconfig.app.json",
-            "assets": [
-              "projects/ex09-directive/src/favicon.ico",
-              "projects/ex09-directive/src/assets"
-            ],
+            "assets": ["projects/ex09-directive/src/favicon.ico", "projects/ex09-directive/src/assets"],
             "styles": ["projects/ex09-directive/src/styles.css"],
             "scripts": []
           },
@@ -953,27 +869,21 @@
             "karmaConfig": "projects/ex09-directive/karma.conf.js",
             "styles": ["projects/ex09-directive/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex09-directive/src/favicon.ico",
-              "projects/ex09-directive/src/assets"
-            ]
+            "assets": ["projects/ex09-directive/src/favicon.ico", "projects/ex09-directive/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex09-directive/tsconfig.app.json",
-              "projects/ex09-directive/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex09-directive/tsconfig.app.json", "projects/ex09-directive/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "ex10-async": {
-      "root": "projects/ex10-async/",
-      "sourceRoot": "projects/ex10-async/src",
+    "ex10-rxjs": {
+      "root": "projects/ex10-rxjs/",
+      "sourceRoot": "projects/ex10-rxjs/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -981,24 +891,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex10-async",
-            "index": "projects/ex10-async/src/index.html",
-            "main": "projects/ex10-async/src/main.ts",
-            "polyfills": "projects/ex10-async/src/polyfills.ts",
-            "tsConfig": "projects/ex10-async/tsconfig.app.json",
-            "assets": [
-              "projects/ex10-async/src/favicon.ico",
-              "projects/ex10-async/src/assets"
-            ],
-            "styles": ["projects/ex10-async/src/styles.css"],
+            "outputPath": "dist/ex10-rxjs",
+            "index": "projects/ex10-rxjs/src/index.html",
+            "main": "projects/ex10-rxjs/src/main.ts",
+            "polyfills": "projects/ex10-rxjs/src/polyfills.ts",
+            "tsConfig": "projects/ex10-rxjs/tsconfig.app.json",
+            "assets": ["projects/ex10-rxjs/src/favicon.ico", "projects/ex10-rxjs/src/assets"],
+            "styles": ["projects/ex10-rxjs/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ex10-async/src/environments/environment.ts",
-                  "with": "projects/ex10-async/src/environments/environment.prod.ts"
+                  "replace": "projects/ex10-rxjs/src/environments/environment.ts",
+                  "with": "projects/ex10-rxjs/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -1023,50 +930,44 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ex10-async:build"
+            "browserTarget": "ex10-rxjs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ex10-async:build:production"
+              "browserTarget": "ex10-rxjs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ex10-async:build"
+            "browserTarget": "ex10-rxjs:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ex10-async/src/test.ts",
-            "polyfills": "projects/ex10-async/src/polyfills.ts",
-            "tsConfig": "projects/ex10-async/tsconfig.spec.json",
-            "karmaConfig": "projects/ex10-async/karma.conf.js",
-            "styles": ["projects/ex10-async/src/styles.css"],
+            "main": "projects/ex10-rxjs/src/test.ts",
+            "polyfills": "projects/ex10-rxjs/src/polyfills.ts",
+            "tsConfig": "projects/ex10-rxjs/tsconfig.spec.json",
+            "karmaConfig": "projects/ex10-rxjs/karma.conf.js",
+            "styles": ["projects/ex10-rxjs/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex10-async/src/favicon.ico",
-              "projects/ex10-async/src/assets"
-            ]
+            "assets": ["projects/ex10-rxjs/src/favicon.ico", "projects/ex10-rxjs/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex10-async/tsconfig.app.json",
-              "projects/ex10-async/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex10-rxjs/tsconfig.app.json", "projects/ex10-rxjs/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "ex11-ngrx": {
-      "root": "projects/ex11-ngrx/",
-      "sourceRoot": "projects/ex11-ngrx/src",
+    "ex11-async": {
+      "root": "projects/ex11-async/",
+      "sourceRoot": "projects/ex11-async/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -1074,24 +975,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex11-ngrx",
-            "index": "projects/ex11-ngrx/src/index.html",
-            "main": "projects/ex11-ngrx/src/main.ts",
-            "polyfills": "projects/ex11-ngrx/src/polyfills.ts",
-            "tsConfig": "projects/ex11-ngrx/tsconfig.app.json",
-            "assets": [
-              "projects/ex11-ngrx/src/favicon.ico",
-              "projects/ex11-ngrx/src/assets"
-            ],
-            "styles": ["projects/ex11-ngrx/src/styles.css"],
+            "outputPath": "dist/ex11-async",
+            "index": "projects/ex11-async/src/index.html",
+            "main": "projects/ex11-async/src/main.ts",
+            "polyfills": "projects/ex11-async/src/polyfills.ts",
+            "tsConfig": "projects/ex11-async/tsconfig.app.json",
+            "assets": ["projects/ex11-async/src/favicon.ico", "projects/ex11-async/src/assets"],
+            "styles": ["projects/ex11-async/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ex11-ngrx/src/environments/environment.ts",
-                  "with": "projects/ex11-ngrx/src/environments/environment.prod.ts"
+                  "replace": "projects/ex11-async/src/environments/environment.ts",
+                  "with": "projects/ex11-async/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -1116,50 +1014,44 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ex11-ngrx:build"
+            "browserTarget": "ex11-async:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ex11-ngrx:build:production"
+              "browserTarget": "ex11-async:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ex11-ngrx:build"
+            "browserTarget": "ex11-async:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ex11-ngrx/src/test.ts",
-            "polyfills": "projects/ex11-ngrx/src/polyfills.ts",
-            "tsConfig": "projects/ex11-ngrx/tsconfig.spec.json",
-            "karmaConfig": "projects/ex11-ngrx/karma.conf.js",
-            "styles": ["projects/ex11-ngrx/src/styles.css"],
+            "main": "projects/ex11-async/src/test.ts",
+            "polyfills": "projects/ex11-async/src/polyfills.ts",
+            "tsConfig": "projects/ex11-async/tsconfig.spec.json",
+            "karmaConfig": "projects/ex11-async/karma.conf.js",
+            "styles": ["projects/ex11-async/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex11-ngrx/src/favicon.ico",
-              "projects/ex11-ngrx/src/assets"
-            ]
+            "assets": ["projects/ex11-async/src/favicon.ico", "projects/ex11-async/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex11-ngrx/tsconfig.app.json",
-              "projects/ex11-ngrx/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex11-async/tsconfig.app.json", "projects/ex11-async/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "ex12-ngrx-effects": {
-      "root": "projects/ex12-ngrx-effects/",
-      "sourceRoot": "projects/ex12-ngrx-effects/src",
+    "ex12-ngrx": {
+      "root": "projects/ex12-ngrx/",
+      "sourceRoot": "projects/ex12-ngrx/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -1167,24 +1059,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex12-ngrx-effects",
-            "index": "projects/ex12-ngrx-effects/src/index.html",
-            "main": "projects/ex12-ngrx-effects/src/main.ts",
-            "polyfills": "projects/ex12-ngrx-effects/src/polyfills.ts",
-            "tsConfig": "projects/ex12-ngrx-effects/tsconfig.app.json",
-            "assets": [
-              "projects/ex12-ngrx-effects/src/favicon.ico",
-              "projects/ex12-ngrx-effects/src/assets"
-            ],
-            "styles": ["projects/ex12-ngrx-effects/src/styles.css"],
+            "outputPath": "dist/ex12-ngrx",
+            "index": "projects/ex12-ngrx/src/index.html",
+            "main": "projects/ex12-ngrx/src/main.ts",
+            "polyfills": "projects/ex12-ngrx/src/polyfills.ts",
+            "tsConfig": "projects/ex12-ngrx/tsconfig.app.json",
+            "assets": ["projects/ex12-ngrx/src/favicon.ico", "projects/ex12-ngrx/src/assets"],
+            "styles": ["projects/ex12-ngrx/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ex12-ngrx-effects/src/environments/environment.ts",
-                  "with": "projects/ex12-ngrx-effects/src/environments/environment.prod.ts"
+                  "replace": "projects/ex12-ngrx/src/environments/environment.ts",
+                  "with": "projects/ex12-ngrx/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -1209,42 +1098,120 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ex12-ngrx-effects:build"
+            "browserTarget": "ex12-ngrx:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ex12-ngrx-effects:build:production"
+              "browserTarget": "ex12-ngrx:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ex12-ngrx-effects:build"
+            "browserTarget": "ex12-ngrx:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ex12-ngrx-effects/src/test.ts",
-            "polyfills": "projects/ex12-ngrx-effects/src/polyfills.ts",
-            "tsConfig": "projects/ex12-ngrx-effects/tsconfig.spec.json",
-            "karmaConfig": "projects/ex12-ngrx-effects/karma.conf.js",
-            "styles": ["projects/ex12-ngrx-effects/src/styles.css"],
+            "main": "projects/ex12-ngrx/src/test.ts",
+            "polyfills": "projects/ex12-ngrx/src/polyfills.ts",
+            "tsConfig": "projects/ex12-ngrx/tsconfig.spec.json",
+            "karmaConfig": "projects/ex12-ngrx/karma.conf.js",
+            "styles": ["projects/ex12-ngrx/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex12-ngrx-effects/src/favicon.ico",
-              "projects/ex12-ngrx-effects/src/assets"
-            ]
+            "assets": ["projects/ex12-ngrx/src/favicon.ico", "projects/ex12-ngrx/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex12-ngrx-effects/tsconfig.app.json",
-              "projects/ex12-ngrx-effects/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex12-ngrx/tsconfig.app.json", "projects/ex12-ngrx/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "ex13-ngrx-effects": {
+      "root": "projects/ex13-ngrx-effects/",
+      "sourceRoot": "projects/ex13-ngrx-effects/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ex13-ngrx-effects",
+            "index": "projects/ex13-ngrx-effects/src/index.html",
+            "main": "projects/ex13-ngrx-effects/src/main.ts",
+            "polyfills": "projects/ex13-ngrx-effects/src/polyfills.ts",
+            "tsConfig": "projects/ex13-ngrx-effects/tsconfig.app.json",
+            "assets": ["projects/ex13-ngrx-effects/src/favicon.ico", "projects/ex13-ngrx-effects/src/assets"],
+            "styles": ["projects/ex13-ngrx-effects/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ex13-ngrx-effects/src/environments/environment.ts",
+                  "with": "projects/ex13-ngrx-effects/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ex13-ngrx-effects:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex13-ngrx-effects:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex13-ngrx-effects:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ex13-ngrx-effects/src/test.ts",
+            "polyfills": "projects/ex13-ngrx-effects/src/polyfills.ts",
+            "tsConfig": "projects/ex13-ngrx-effects/tsconfig.spec.json",
+            "karmaConfig": "projects/ex13-ngrx-effects/karma.conf.js",
+            "styles": ["projects/ex13-ngrx-effects/src/styles.css"],
+            "scripts": [],
+            "assets": ["projects/ex13-ngrx-effects/src/favicon.ico", "projects/ex13-ngrx-effects/src/assets"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/ex13-ngrx-effects/tsconfig.app.json", "projects/ex13-ngrx-effects/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
@@ -1265,10 +1232,7 @@
             "main": "projects/ex99-koans/src/main.ts",
             "polyfills": "projects/ex99-koans/src/polyfills.ts",
             "tsConfig": "projects/ex99-koans/tsconfig.app.json",
-            "assets": [
-              "projects/ex99-koans/src/favicon.ico",
-              "projects/ex99-koans/src/assets"
-            ],
+            "assets": ["projects/ex99-koans/src/favicon.ico", "projects/ex99-koans/src/assets"],
             "styles": ["projects/ex99-koans/src/styles.css"],
             "scripts": []
           },
@@ -1325,19 +1289,13 @@
             "karmaConfig": "projects/ex99-koans/karma.conf.js",
             "styles": ["projects/ex99-koans/src/styles.css"],
             "scripts": [],
-            "assets": [
-              "projects/ex99-koans/src/favicon.ico",
-              "projects/ex99-koans/src/assets"
-            ]
+            "assets": ["projects/ex99-koans/src/favicon.ico", "projects/ex99-koans/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ex99-koans/tsconfig.app.json",
-              "projects/ex99-koans/tsconfig.spec.json"
-            ],
+            "tsConfig": ["projects/ex99-koans/tsconfig.app.json", "projects/ex99-koans/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
