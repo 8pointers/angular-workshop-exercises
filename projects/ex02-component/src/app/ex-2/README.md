@@ -1,7 +1,3 @@
-## Exercise 1
-
-Implement a component that shows the current time when page is rendered (it doesn't have to update automatically).
-
 ## Exercise 2
 
 Implement a component that displays a random message of the day (from a predefined list of messages):
@@ -17,4 +13,4 @@ const messages = [
 ];
 ```
 
-Render your component on the homepage.
+Make sure your component is rendered on the homepage.

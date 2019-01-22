@@ -7,61 +7,7 @@ class Login {
 @Component({
   selector: 'app-login',
   styleUrls: ['./login.component.css'],
-  template: `
-    <div class="container">
-      <h1>Login Form</h1>
-      <form (ngSubmit)="login(); loginForm.reset()" #loginForm="ngForm">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input
-            type="text"
-            class="form-control"
-            required
-            [(ngModel)]="model.username"
-            name="username"
-            placeholder="Enter username"
-            #usernameSpy
-            #username="ngModel"
-          />
-          {{ usernameSpy.className }}
-          <div
-            [hidden]="username.valid || username.pristine"
-            class="alert alert-danger"
-          >
-            Required
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            required
-            [(ngModel)]="model.password"
-            name="password"
-            placeholder="password"
-            #passwordSpy
-            #password="ngModel"
-          />
-          {{ passwordSpy.className }}
-          <div
-            [hidden]="password.valid || password.pristine"
-            class="alert alert-danger"
-          >
-            Required
-          </div>
-        </div>
-        <button
-          type="submit"
-          class="btn btn-primary"
-          [disabled]="!loginForm.form.valid"
-        >
-          Login
-        </button>
-      </form>
-      <h2>{{ model | json }}</h2>
-    </div>
-  `
+  templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
   model = new Login('', '');
