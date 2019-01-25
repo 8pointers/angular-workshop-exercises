@@ -1,6 +1,6 @@
 describe('TypeScript :: Decorators :: ', function() {
   const __: any = 'replace me so that the test is passing';
-  it('should understand method decorators', function() {
+  fit('should understand method decorators', function() {
     function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
       const method = descriptor.value;
       descriptor.value = function() {
@@ -15,7 +15,12 @@ describe('TypeScript :: Decorators :: ', function() {
       }
     }
     const p = new Person();
-    expect(p.reply('John')).toBe(__);
+    spyOn(console, 'log');
+
+    const result = p.reply('John');
+
+    expect(result).toBe(__);
+    expect(console.log).toHaveBeenCalledWith(__);
   });
   it('should understand decorator factories', function() {
     function slow(durationInMillis: number) {
