@@ -8,10 +8,7 @@ import { Tick, Toggle } from './game-of-life.actions';
   styleUrls: ['./game-of-life.component.css'],
   template: `
     <div>
-      <div
-        class="grid"
-        [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }"
-      >
+      <div class="grid" [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }">
         <div
           *ngFor="let cell of (isAlive$ | async | cells: n)"
           [ngClass]="{ cell: true, alive: cell.isAlive }"

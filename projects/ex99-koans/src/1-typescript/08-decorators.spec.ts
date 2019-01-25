@@ -1,19 +1,10 @@
-describe('Decorators', function() {
+describe('TypeScript :: Decorators :: ', function() {
   const __: any = 'replace me so that the test is passing';
-  it('has method decorators', function() {
-    function log(
-      target: any,
-      propertyName: string,
-      descriptor: TypedPropertyDescriptor<Function>
-    ) {
+  it('should understand method decorators', function() {
+    function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
       const method = descriptor.value;
       descriptor.value = function() {
-        console.log.apply(
-          console,
-          ['Invoking', propertyName, 'with arguments:'].concat(
-            Array.prototype.slice.call(arguments)
-          )
-        );
+        console.log.apply(console, ['Invoking', propertyName, 'with arguments:'].concat(Array.prototype.slice.call(arguments)));
         return method.apply(this, arguments);
       };
     }
@@ -26,25 +17,16 @@ describe('Decorators', function() {
     const p = new Person();
     expect(p.reply('John')).toBe(__);
   });
-  it('has decorator factories', function() {
+  it('should understand decorator factories', function() {
     function slow(durationInMillis: number) {
-      return function(
-        target: any,
-        propertyName: string,
-        descriptor: TypedPropertyDescriptor<Function>
-      ) {
+      return function(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
         const method = descriptor.value;
         descriptor.value = function() {
           const tsStart = Date.now();
           const result = method.apply(this, arguments);
           const duration = Date.now() - tsStart;
           if (duration > durationInMillis) {
-            console.log(
-              'Slow method invocation:',
-              propertyName,
-              'duration:',
-              duration
-            );
+            console.log('Slow method invocation:', propertyName, 'duration:', duration);
           }
           return result;
         };
