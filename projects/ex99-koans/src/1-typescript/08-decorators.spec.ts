@@ -1,6 +1,6 @@
 describe('TypeScript :: Decorators :: ', function() {
   const __: any = 'replace me so that the test is passing';
-  fit('should understand method decorators', function() {
+  it('should understand method decorators', function() {
     function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
       const method = descriptor.value;
       descriptor.value = function() {

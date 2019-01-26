@@ -35,14 +35,19 @@ describe('TypeScript :: arrays :: ', function() {
     const people = [{ name: 'First', age: 12 }, { name: 'Second', age: 23 }, { name: 'Third', age: 34 }];
     expect(people.map(({ name, ...rest }) => ({ name: `Mr. ${name}`, ...rest }))).toEqual(__);
   });
+  it('should understand Array.prototype.flatMap', function() {
+    const numbers = [1, 2, 3];
+    const letters = ['a', 'b', 'c', 'd'];
+    expect(numbers.flatMap(n => letters.map(l => [n, l]))).toEqual(__);
+  });
   it('should understand Array.prototype.filter', function() {
     expect([1, 2, 3, 4, 5].filter(x => x % 2)).toEqual(__);
     const people = [{ name: 'First', age: 12 }, { name: 'Second', age: 23 }, { name: 'Third', age: 34 }];
     expect(people.filter(({ age }) => age >= 21)).toEqual(__);
   });
   it('should understand Array.prototype methods chaining', function() {
-    const ngClass = classMap =>
-      Object.entries(classMap)
+    const ngClass = classes =>
+      Object.entries(classes)
         .filter(([, isOn]) => isOn)
         .map(([className]) => className)
         .join(' ');

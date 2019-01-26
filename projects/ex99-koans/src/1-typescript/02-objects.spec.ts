@@ -68,4 +68,18 @@ describe('TypeScript :: objects :: ', function() {
     const samurai3 = { weapons: ['Katana'], age: 43, ...person };
     expect(samurai3).toEqual(__);
   });
+  it('should understand enumerating object properties', function() {
+    const person = {
+      id: 1,
+      name: 'Myamoto Musashi',
+      age: 23,
+      address: {
+        street: 'Ninja Way',
+        postcode: '555-XX'
+      }
+    };
+    expect(Object.keys(person)).toEqual(__);
+    expect(Object.values(person)).toEqual(__);
+    expect(Object.entries(person)).toEqual(__);
+  });
 });
