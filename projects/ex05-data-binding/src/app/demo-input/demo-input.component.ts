@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-demo-input-parent',
   template: `
@@ -12,10 +11,8 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class DemoInputParentComponent {
   name = 'World';
-
   onClick = () => (this.name += '!');
 }
-
 @Component({
   selector: 'app-demo-input-child',
   template: '<div>Hello {{ name }}!</div>'
@@ -23,11 +20,9 @@ export class DemoInputParentComponent {
 export class DemoInputChildComponent implements OnInit, OnChanges {
   @Input()
   name: string;
-
   ngOnInit() {
     console.log('ngOnInit');
   }
-
   ngOnChanges(changes) {
     console.log('ngOnChanges', changes);
   }
