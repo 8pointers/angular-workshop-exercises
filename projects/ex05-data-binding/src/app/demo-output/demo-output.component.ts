@@ -1,18 +1,22 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-demo-output',
-  template: `
-    <button (click)="greet('World')">Say Hello</button>
-  `
+  selector: 'app-demo-output-parent',
+  template: '{{dice}}<app-demo-output-child (roll)="onRoll($event)"></app-demo-output-child>'
 })
-export class DemoOutputComponent implements OnInit {
+export class DemoOutputParentComponent {
+  dice = 0;
+
+  onRoll = dice => (this.dice = dice);
+}
+
+@Component({
+  selector: 'app-demo-output-child',
+  template: '<button (click)="onClick()">Roll</button>'
+})
+export class DemoOutputChildComponent {
   @Output()
-  greetingRequested = new EventEmitter();
+  roll = new EventEmitter();
 
-  greet(name) {
-    this.greetingRequested.next(name);
-  }
-
-  ngOnInit() {}
+  onClick = () => this.roll.next(1 + Math.floor(6 * Math.random()));
 }

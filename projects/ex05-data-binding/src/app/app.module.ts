@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { DemoInputComponent } from './demo-input/demo-input.component';
-import { DemoOutputComponent } from './demo-output/demo-output.component';
+import { DemoInputChildComponent, DemoInputParentComponent } from './demo-input/demo-input.component';
+import { DemoOutputChildComponent, DemoOutputParentComponent } from './demo-output/demo-output.component';
+import { DemoTwoWayComponent, DemoTwoWayCounterComponent } from './demo-two-way/demo-two-way.component';
 import { GameOfLifeComponent } from './game-of-life/game-of-life.component';
 import { TodoComponent, TodoItemComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoInputComponent,
-    DemoOutputComponent,
+    DemoInputParentComponent,
+    DemoInputChildComponent,
+    DemoOutputParentComponent,
+    DemoOutputChildComponent,
+    DemoTwoWayComponent,
+    DemoTwoWayCounterComponent,
     GameOfLifeComponent,
     TodoComponent,
     TodoItemComponent
