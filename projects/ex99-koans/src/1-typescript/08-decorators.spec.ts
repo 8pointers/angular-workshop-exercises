@@ -3,8 +3,8 @@ describe('TypeScript :: Decorators :: ', function() {
   it('should understand method decorators', function() {
     function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
       const method = descriptor.value;
-      descriptor.value = function() {
-        console.log.apply(console, ['Invoking', propertyName, 'with arguments:'].concat(Array.prototype.slice.call(arguments)));
+      descriptor.value = function(...args) {
+        console.log('Invoking', propertyName, 'with arguments:', ...args);
         return method.apply(this, arguments);
       };
     }
@@ -26,9 +26,9 @@ describe('TypeScript :: Decorators :: ', function() {
     function slow(durationInMillis: number) {
       return function(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
         const method = descriptor.value;
-        descriptor.value = function() {
+        descriptor.value = function(...args) {
           const tsStart = Date.now();
-          const result = method.apply(this, arguments);
+          const result = method.apply(this, args);
           const duration = Date.now() - tsStart;
           if (duration > durationInMillis) {
             console.log('Slow method invocation:', propertyName, 'duration:', duration);

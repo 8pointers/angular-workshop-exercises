@@ -39,6 +39,22 @@ describe('TypeScript :: arrays :: ', function() {
     const numbers = [1, 2, 3];
     const letters = ['a', 'b', 'c', 'd'];
     expect(numbers.flatMap(n => letters.map(l => [n, l]))).toEqual(__);
+
+    const people = [
+      { id: 1, name: 'First', addresses: [{ street: '1 Ninja Way', postcode: '555-XX' }] },
+      {
+        id: 1,
+        name: 'Second',
+        addresses: [
+          { street: '22 Ninja Way', postcode: '555-YY' },
+          { street: '23 Ninja Way', postcode: '555-YY' },
+          { street: '24 Ninja Way', postcode: '555-YY' }
+        ]
+      },
+      { id: 1, name: 'Third', addresses: [{ street: '33 Ninja Way', postcode: '555-ZZ' }, { street: '34 Ninja Way', postcode: '555-ZZ' }] }
+    ];
+    expect(people.map(person => person.addresses)).toEqual(__);
+    expect(people.flatMap(person => person.addresses)).toEqual(__);
   });
   it('should understand Array.prototype.filter', function() {
     expect([1, 2, 3, 4, 5].filter(x => x % 2)).toEqual(__);
