@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-click-counter',
-  templateUrl: './click-counter.component.html'
+  template: `
+    <p>
+      <button (click)="count()">Count</button> <br />
+      Clicked: {{ times }}
+    </p>
+  `
 })
-export class ClickCounterComponent implements OnInit {
-  times: number;
+export class ClickCounterComponent {
+  times = 0;
 
-  count(): void {
-    this.times++;
-  }
-
-  ngOnInit() {
-    this.times = 0;
-  }
+  count = () => this.times++;
 }

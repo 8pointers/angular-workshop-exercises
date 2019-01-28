@@ -8,9 +8,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class DemoNgStyleComponent implements OnInit, OnDestroy {
   size = 10;
-  interval: any;
+  interval: number;
   ngOnInit() {
-    this.interval = setInterval(() => (this.size = 10 + (Math.floor(Date.now() / 100) % 10)), 100);
+    this.interval = window.setInterval(() => (this.size = 10 + (Math.floor(Date.now() / 1000) % 10)), 1000);
   }
   ngOnDestroy() {
     clearInterval(this.interval);

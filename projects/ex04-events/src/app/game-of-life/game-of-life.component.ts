@@ -5,10 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./game-of-life.component.css'],
   template: `
     <div>
-      <div
-        class="grid"
-        [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }"
-      >
+      <div class="grid" [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }">
         <div
           *ngFor="let cell of cells"
           [ngClass]="{ cell: true, alive: cell.isAlive }"
