@@ -1,16 +1,14 @@
 import { Component, Input } from '@angular/core';
 
 const cellKey = (row, column) => `${row}_${column}`;
+const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 3) - 1, i === 4 ? 0 : 1]);
 
 @Component({
   selector: 'app-game-of-life',
   styleUrls: ['./game-of-life.component.css'],
   template: `
     <div>
-      <div
-        class="grid"
-        [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }"
-      >
+      <div class="grid" [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }">
         <div
           *ngFor="let cell of cells"
           [ngClass]="{ cell: true, alive: cell.isAlive }"
@@ -36,59 +34,24 @@ export class GameOfLifeComponent {
   height: number;
   isAlive = {};
 
-  isCellAlive(row, column) {
-    return this.isAlive[cellKey(row, column)] || false;
-  }
+  isCellAlive = (row, column) => this.isAlive[cellKey(row, column)] || false;
 
   toggleCellState(row, column) {
     const key = cellKey(row, column);
     if (this.isAlive[key]) {
       delete this.isAlive[key];
     } else {
-      this.isAlive[key] = true;
+      this.isAlive[key] = [row, column];
     }
   }
 
   tick() {
-    const numberOfNeighbours = {};
-    let parts, row, column, neighbourKey;
-    for (const key in this.isAlive) {
-      if (this.isAlive.hasOwnProperty(key)) {
-        parts = key.split('_');
-        row = parseInt(parts[0], 10);
-        column = parseInt(parts[1], 10);
-        numberOfNeighbours[key] = numberOfNeighbours[key] || 0;
-        [
-          [-1, -1],
-          [-1, 0],
-          [-1, 1],
-          [0, -1],
-          [0, 1],
-          [1, -1],
-          [1, 0],
-          [1, 1]
-        ].forEach(offset => {
-          neighbourKey = cellKey(row + offset[0], column + offset[1]);
-          numberOfNeighbours[neighbourKey] =
-            (numberOfNeighbours[neighbourKey] || 0) + 1;
-        });
-      }
-    }
-    for (const key in numberOfNeighbours) {
-      if (numberOfNeighbours.hasOwnProperty(key)) {
-        const shouldDie =
-          this.isAlive[key] &&
-          (numberOfNeighbours[key] < 2 || numberOfNeighbours[key] > 3);
-        const shouldResurrect =
-          !this.isAlive[key] && numberOfNeighbours[key] === 3;
-        if (shouldDie || shouldResurrect) {
-          parts = key.split('_');
-          row = parseInt(parts[0], 10);
-          column = parseInt(parts[1], 10);
-          this.toggleCellState(row, column);
-        }
-      }
-    }
+    const neighbours = Object.values(this.isAlive)
+      .flatMap(([row, col]) => deltas.map(([r, c, n]) => [cellKey(row + r, col + c), row + r, col + c, n]))
+      .reduce((acc, [key, row, col, n]) => ({ ...acc, [key]: { key, row, col, count: ((acc[key] && acc[key].count) || 0) + n } }), {});
+    this.isAlive = Object.values(neighbours)
+      .filter(({ key, count }) => (this.isAlive[key] && count === 2) || count === 3)
+      .reduce((result, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
   }
 
   get cells() {
