@@ -4,7 +4,7 @@ import { flatMap, map, pluck, reduce } from 'rxjs/operators';
 
 const __: any = 'replace me so that the test is passing';
 
-describe('Higher-order observables observables', function() {
+describe('Higher-order observables', function() {
   it('should understand flatMap', function(done) {
     const o$ = from([1, 3, 4, 5, 7]).pipe(
       flatMap(playerId => ajax.getJSON(`assets/player/${playerId}.json`)),
@@ -25,11 +25,7 @@ describe('Higher-order observables observables', function() {
 
   it('should understand forkJoin', function(done) {
     const o$ = forkJoin(
-      [1, 3, 4, 5, 7].map(playerId =>
-        ajax
-          .getJSON(`assets/player/${playerId}.json`)
-          .pipe(map((player: any) => player.name))
-      )
+      [1, 3, 4, 5, 7].map(playerId => ajax.getJSON(`assets/player/${playerId}.json`).pipe(map((player: any) => player.name)))
     );
     const result = [];
     o$.subscribe(
