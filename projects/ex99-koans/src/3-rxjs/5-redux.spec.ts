@@ -38,7 +38,7 @@ describe('Redux', function() {
     const ofType = t => filter(({ type }) => type === t);
     const fetchPlayer$ = action$.pipe(
       ofType('FETCH_PLAYER'),
-      flatMap(({ playerId }) => ajax.getJSON(`assets/player/${playerId}.json`)),
+      flatMap(({ playerId }: any) => ajax.getJSON(`assets/player/${playerId}.json`)),
       map(player => ({ type: 'PLAYER_RECEIVED', player }))
     );
     const state$ = merge(action$, fetchPlayer$).pipe(scan(reducer, undefined));

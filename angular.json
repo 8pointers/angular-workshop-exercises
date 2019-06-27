@@ -44,16 +44,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex00-new:build" },
-          "configurations": { "production": { "browserTarget": "ex00-new:build:production" } }
+          "options": {
+            "browserTarget": "ex00-new:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex00-new:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex00-new:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex00-new:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -75,8 +92,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex00-new/e2e/protractor.conf.js", "devServerTarget": "ex00-new:serve" },
-          "configurations": { "production": { "devServerTarget": "ex00-new:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex00-new/e2e/protractor.conf.js",
+            "devServerTarget": "ex00-new:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex00-new:serve:production"
+            }
+          }
         }
       }
     },
@@ -121,16 +145,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex01-intro:build" },
-          "configurations": { "production": { "browserTarget": "ex01-intro:build:production" } }
+          "options": {
+            "browserTarget": "ex01-intro:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex01-intro:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex01-intro:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex01-intro:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -152,8 +193,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex01-intro/e2e/protractor.conf.js", "devServerTarget": "ex01-intro:serve" },
-          "configurations": { "production": { "devServerTarget": "ex01-intro:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex01-intro/e2e/protractor.conf.js",
+            "devServerTarget": "ex01-intro:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex01-intro:serve:production"
+            }
+          }
         }
       }
     },
@@ -198,16 +246,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex02-component:build" },
-          "configurations": { "production": { "browserTarget": "ex02-component:build:production" } }
+          "options": {
+            "browserTarget": "ex02-component:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex02-component:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex02-component:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex02-component:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -229,8 +294,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex02-component/e2e/protractor.conf.js", "devServerTarget": "ex02-component:serve" },
-          "configurations": { "production": { "devServerTarget": "ex02-component:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex02-component/e2e/protractor.conf.js",
+            "devServerTarget": "ex02-component:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex02-component:serve:production"
+            }
+          }
         }
       }
     },
@@ -275,18 +347,32 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex03-built-in-directives:build" },
-          "configurations": { "production": { "browserTarget": "ex03-built-in-directives:build:production" } }
+          "options": {
+            "browserTarget": "ex03-built-in-directives:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex03-built-in-directives:build:production"
+            }
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "ex03-built-in-directives:build" }
+          "options": {
+            "browserTarget": "ex03-built-in-directives:build"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -313,7 +399,11 @@
             "protractorConfig": "projects/ex03-built-in-directives/e2e/protractor.conf.js",
             "devServerTarget": "ex03-built-in-directives:serve"
           },
-          "configurations": { "production": { "devServerTarget": "ex03-built-in-directives:serve:production" } }
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex03-built-in-directives:serve:production"
+            }
+          }
         }
       }
     },
@@ -358,16 +448,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex04-events:build" },
-          "configurations": { "production": { "browserTarget": "ex04-events:build:production" } }
+          "options": {
+            "browserTarget": "ex04-events:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex04-events:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex04-events:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex04-events:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -389,8 +496,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex04-events/e2e/protractor.conf.js", "devServerTarget": "ex04-events:serve" },
-          "configurations": { "production": { "devServerTarget": "ex04-events:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex04-events/e2e/protractor.conf.js",
+            "devServerTarget": "ex04-events:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex04-events:serve:production"
+            }
+          }
         }
       }
     },
@@ -435,18 +549,32 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex05-data-binding:build" },
-          "configurations": { "production": { "browserTarget": "ex05-data-binding:build:production" } }
+          "options": {
+            "browserTarget": "ex05-data-binding:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex05-data-binding:build:production"
+            }
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "ex05-data-binding:build" }
+          "options": {
+            "browserTarget": "ex05-data-binding:build"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -473,7 +601,11 @@
             "protractorConfig": "projects/ex05-data-binding/e2e/protractor.conf.js",
             "devServerTarget": "ex05-data-binding:serve"
           },
-          "configurations": { "production": { "devServerTarget": "ex05-data-binding:serve:production" } }
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex05-data-binding:serve:production"
+            }
+          }
         }
       }
     },
@@ -518,16 +650,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex06-forms:build" },
-          "configurations": { "production": { "browserTarget": "ex06-forms:build:production" } }
+          "options": {
+            "browserTarget": "ex06-forms:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex06-forms:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex06-forms:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex06-forms:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -549,8 +698,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex06-forms/e2e/protractor.conf.js", "devServerTarget": "ex06-forms:serve" },
-          "configurations": { "production": { "devServerTarget": "ex06-forms:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex06-forms/e2e/protractor.conf.js",
+            "devServerTarget": "ex06-forms:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex06-forms:serve:production"
+            }
+          }
         }
       }
     },
@@ -595,16 +751,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex07-routing:build" },
-          "configurations": { "production": { "browserTarget": "ex07-routing:build:production" } }
+          "options": {
+            "browserTarget": "ex07-routing:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex07-routing:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex07-routing:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex07-routing:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -626,8 +799,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex07-routing/e2e/protractor.conf.js", "devServerTarget": "ex07-routing:serve" },
-          "configurations": { "production": { "devServerTarget": "ex07-routing:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex07-routing/e2e/protractor.conf.js",
+            "devServerTarget": "ex07-routing:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex07-routing:serve:production"
+            }
+          }
         }
       }
     },
@@ -672,16 +852,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex08-service:build" },
-          "configurations": { "production": { "browserTarget": "ex08-service:build:production" } }
+          "options": {
+            "browserTarget": "ex08-service:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex08-service:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex08-service:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex08-service:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -703,8 +900,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex08-service/e2e/protractor.conf.js", "devServerTarget": "ex08-service:serve" },
-          "configurations": { "production": { "devServerTarget": "ex08-service:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex08-service/e2e/protractor.conf.js",
+            "devServerTarget": "ex08-service:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex08-service:serve:production"
+            }
+          }
         }
       }
     },
@@ -749,16 +953,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex09-directive:build" },
-          "configurations": { "production": { "browserTarget": "ex09-directive:build:production" } }
+          "options": {
+            "browserTarget": "ex09-directive:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex09-directive:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex09-directive:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex09-directive:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -780,8 +1001,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex09-directive/e2e/protractor.conf.js", "devServerTarget": "ex09-directive:serve" },
-          "configurations": { "production": { "devServerTarget": "ex09-directive:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex09-directive/e2e/protractor.conf.js",
+            "devServerTarget": "ex09-directive:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex09-directive:serve:production"
+            }
+          }
         }
       }
     },
@@ -826,16 +1054,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex10-rxjs:build" },
-          "configurations": { "production": { "browserTarget": "ex10-rxjs:build:production" } }
+          "options": {
+            "browserTarget": "ex10-rxjs:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex10-rxjs:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex10-rxjs:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex10-rxjs:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -857,8 +1102,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex10-rxjs/e2e/protractor.conf.js", "devServerTarget": "ex10-rxjs:serve" },
-          "configurations": { "production": { "devServerTarget": "ex10-rxjs:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex10-rxjs/e2e/protractor.conf.js",
+            "devServerTarget": "ex10-rxjs:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex10-rxjs:serve:production"
+            }
+          }
         }
       }
     },
@@ -903,16 +1155,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex11-async:build" },
-          "configurations": { "production": { "browserTarget": "ex11-async:build:production" } }
+          "options": {
+            "browserTarget": "ex11-async:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex11-async:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex11-async:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex11-async:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -934,8 +1203,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex11-async/e2e/protractor.conf.js", "devServerTarget": "ex11-async:serve" },
-          "configurations": { "production": { "devServerTarget": "ex11-async:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex11-async/e2e/protractor.conf.js",
+            "devServerTarget": "ex11-async:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex11-async:serve:production"
+            }
+          }
         }
       }
     },
@@ -980,16 +1256,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex12-ngrx:build" },
-          "configurations": { "production": { "browserTarget": "ex12-ngrx:build:production" } }
+          "options": {
+            "browserTarget": "ex12-ngrx:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex12-ngrx:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex12-ngrx:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex12-ngrx:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -1011,8 +1304,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex12-ngrx/e2e/protractor.conf.js", "devServerTarget": "ex12-ngrx:serve" },
-          "configurations": { "production": { "devServerTarget": "ex12-ngrx:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex12-ngrx/e2e/protractor.conf.js",
+            "devServerTarget": "ex12-ngrx:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex12-ngrx:serve:production"
+            }
+          }
         }
       }
     },
@@ -1057,18 +1357,32 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex13-ngrx-effects:build" },
-          "configurations": { "production": { "browserTarget": "ex13-ngrx-effects:build:production" } }
+          "options": {
+            "browserTarget": "ex13-ngrx-effects:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex13-ngrx-effects:build:production"
+            }
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "ex13-ngrx-effects:build" }
+          "options": {
+            "browserTarget": "ex13-ngrx-effects:build"
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -1095,7 +1409,11 @@
             "protractorConfig": "projects/ex13-ngrx-effects/e2e/protractor.conf.js",
             "devServerTarget": "ex13-ngrx-effects:serve"
           },
-          "configurations": { "production": { "devServerTarget": "ex13-ngrx-effects:serve:production" } }
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex13-ngrx-effects:serve:production"
+            }
+          }
         }
       }
     },
@@ -1140,16 +1458,33 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "ex99-koans:build" },
-          "configurations": { "production": { "browserTarget": "ex99-koans:build:production" } }
+          "options": {
+            "browserTarget": "ex99-koans:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ex99-koans:build:production"
+            }
+          }
         },
-        "extract-i18n": { "builder": "@angular-devkit/build-angular:extract-i18n", "options": { "browserTarget": "ex99-koans:build" } },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ex99-koans:build"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -1171,8 +1506,15 @@
         },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
-          "options": { "protractorConfig": "projects/ex99-koans/e2e/protractor.conf.js", "devServerTarget": "ex99-koans:serve" },
-          "configurations": { "production": { "devServerTarget": "ex99-koans:serve:production" } }
+          "options": {
+            "protractorConfig": "projects/ex99-koans/e2e/protractor.conf.js",
+            "devServerTarget": "ex99-koans:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ex99-koans:serve:production"
+            }
+          }
         }
       }
     }
