@@ -20,11 +20,7 @@
             "tsConfig": "projects/ex00-new/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex00-new/src/favicon.ico", "projects/ex00-new/src/assets"],
-            "styles": [
-              "projects/ex00-new/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex00-new/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -121,11 +117,7 @@
             "tsConfig": "projects/ex01-intro/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex01-intro/src/favicon.ico", "projects/ex01-intro/src/assets"],
-            "styles": [
-              "projects/ex01-intro/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex01-intro/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -222,11 +214,7 @@
             "tsConfig": "projects/ex02-component/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex02-component/src/favicon.ico", "projects/ex02-component/src/assets"],
-            "styles": [
-              "projects/ex02-component/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex02-component/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -323,11 +311,7 @@
             "tsConfig": "projects/ex03-built-in-directives/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex03-built-in-directives/src/favicon.ico", "projects/ex03-built-in-directives/src/assets"],
-            "styles": [
-              "projects/ex03-built-in-directives/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex03-built-in-directives/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -424,11 +408,7 @@
             "tsConfig": "projects/ex04-events/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex04-events/src/favicon.ico", "projects/ex04-events/src/assets"],
-            "styles": [
-              "projects/ex04-events/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex04-events/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -525,11 +505,7 @@
             "tsConfig": "projects/ex05-data-binding/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex05-data-binding/src/favicon.ico", "projects/ex05-data-binding/src/assets"],
-            "styles": [
-              "projects/ex05-data-binding/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex05-data-binding/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -626,11 +602,7 @@
             "tsConfig": "projects/ex06-forms/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex06-forms/src/favicon.ico", "projects/ex06-forms/src/assets"],
-            "styles": [
-              "projects/ex06-forms/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex06-forms/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -727,11 +699,7 @@
             "tsConfig": "projects/ex07-routing/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex07-routing/src/favicon.ico", "projects/ex07-routing/src/assets"],
-            "styles": [
-              "projects/ex07-routing/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex07-routing/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -828,11 +796,7 @@
             "tsConfig": "projects/ex08-service/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex08-service/src/favicon.ico", "projects/ex08-service/src/assets"],
-            "styles": [
-              "projects/ex08-service/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex08-service/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -929,11 +893,7 @@
             "tsConfig": "projects/ex09-directive/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex09-directive/src/favicon.ico", "projects/ex09-directive/src/assets"],
-            "styles": [
-              "projects/ex09-directive/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex09-directive/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -1030,11 +990,7 @@
             "tsConfig": "projects/ex10-rxjs/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex10-rxjs/src/favicon.ico", "projects/ex10-rxjs/src/assets"],
-            "styles": [
-              "projects/ex10-rxjs/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex10-rxjs/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -1131,11 +1087,7 @@
             "tsConfig": "projects/ex11-async/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex11-async/src/favicon.ico", "projects/ex11-async/src/assets"],
-            "styles": [
-              "projects/ex11-async/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex11-async/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -1232,11 +1184,7 @@
             "tsConfig": "projects/ex12-ngrx/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex12-ngrx/src/favicon.ico", "projects/ex12-ngrx/src/assets"],
-            "styles": [
-              "projects/ex12-ngrx/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex12-ngrx/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -1333,11 +1281,7 @@
             "tsConfig": "projects/ex13-ngrx-effects/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex13-ngrx-effects/src/favicon.ico", "projects/ex13-ngrx-effects/src/assets"],
-            "styles": [
-              "projects/ex13-ngrx-effects/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex13-ngrx-effects/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -1434,11 +1378,7 @@
             "tsConfig": "projects/ex99-koans/tsconfig.app.json",
             "aot": false,
             "assets": ["projects/ex99-koans/src/favicon.ico", "projects/ex99-koans/src/assets"],
-            "styles": [
-              "projects/ex99-koans/src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
+            "styles": ["projects/ex99-koans/src/styles.css"],
             "scripts": []
           },
           "configurations": {
