@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
     <ng-template #hasLost> <div>You lost.</div> </ng-template>
 
     <div *ngIf="hasWon; else comiserations">Congratulations :)</div>
-    <ng-template #comiserations>Comiserations :(</ng-template>
+    <ng-template ref-comiserations>Comiserations :(</ng-template>
   `
 })
 export class DemoNgIfComponent {

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-demo-ng-for-track-by',
   template: `
@@ -12,18 +12,14 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
     </div>
   `
 })
-export class DemoNgForTrackByComponent implements OnInit, OnDestroy {
-  interval: any;
+export class DemoNgForTrackByComponent {
   length = 5;
   offset = 0;
+  constructor() {
+    setInterval(() => this.offset++, 2000); // Bad idea!!!
+  }
   get people() {
     return Array.from({ length: this.length }, (_, i) => (this.offset + i) % this.length).map(id => ({ id, name: `Name ${id}` }));
-  }
-  ngOnInit() {
-    this.interval = setInterval(() => this.offset++, 2000);
-  }
-  ngOnDestroy() {
-    clearInterval(this.interval);
   }
   id = name => name.id;
 }

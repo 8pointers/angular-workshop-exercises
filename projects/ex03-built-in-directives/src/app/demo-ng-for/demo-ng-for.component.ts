@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-demo-ng-for',
@@ -10,10 +10,6 @@ import { Component, OnInit } from '@angular/core';
     <div *ngFor="let friend of friends; let i = index">{{ i }} {{ friend }}</div>
   `
 })
-export class DemoNgForComponent implements OnInit {
-  friends: any[];
-
-  ngOnInit() {
-    this.friends = ['Hattori', 'Myamoto', 'Dave'];
-  }
+export class DemoNgForComponent {
+  friends: ['Hattori', 'Myamoto', 'Dave'];
 }

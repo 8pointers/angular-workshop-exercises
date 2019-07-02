@@ -3,16 +3,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-demo-ng-class',
   template: `
-    <div ngClass="user vip">With String</div>
-    <div [ngClass]="'user vip'">With String</div>
-    <div [ngClass]="['user', loggedIn]">With Array</div>
-    <div [ngClass]="{ user: true, vip: firstUser.isVIP }">{{ firstUser.name }}</div>
-    <div [ngClass]="{ user: true, vip: secondUser.isVIP }">{{ secondUser.name }}</div>
+    <div class="{{ (normalUser ? 'loggedIn' : '') + (normalUser?.vip ? ' vip' : '') }}">
+      Motivation
+    </div>
+    <div [ngClass]="{ loggedIn: noUser, vip: noUser?.vip }">
+      {{ noUser?.name || 'Plase login...' }}
+    </div>
+    <div [ngClass]="{ loggedIn: normalUser, vip: normalUser?.vip }">
+      {{ normalUser?.name || 'Plase login...' }}
+    </div>
+    <div [ngClass]="{ loggedIn: vipUser, vip: vipUser?.vip }">
+      {{ vipUser?.name || 'Plase login...' }}
+    </div>
+    <div [ngClass]="['loggedIn', 'vip']">With Array</div>
+    <div [ngClass]="'loggedIn vip'">With String</div>
+    <div ngClass="loggedIn vip">No binding</div>
   `,
   styleUrls: ['./demo-ng-class.component.css']
 })
 export class DemoNgClassComponent {
-  loggedIn = 'loggedIn';
-  firstUser = { name: 'Myamoto', isVIP: true };
-  secondUser = { name: 'Hattori', isVIP: false };
+  noUser = null;
+  normalUser = { name: 'Myamoto', vip: false };
+  vipUser = { name: 'Hattori', vip: true };
 }

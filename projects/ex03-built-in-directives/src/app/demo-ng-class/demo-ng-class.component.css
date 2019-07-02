@@ -1,11 +1,7 @@
-.user {
+.loggedIn {
   color: blue;
 }
 
 .vip {
-  color: red;
-}
-
-.loggedIn {
-  font-weight: bold;
+  text-decoration: underline;
 }
