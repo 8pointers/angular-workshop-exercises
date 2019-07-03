@@ -11,5 +11,5 @@ import { Component } from '@angular/core';
   `
 })
 export class DemoNgForComponent {
-  friends: ['Hattori', 'Myamoto', 'Dave'];
+  friends = ['Hattori', 'Myamoto', 'Dave'];
 }
