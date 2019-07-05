@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+class Item {
+  private static nextId = 1;
+  id = Item.nextId++;
+  constructor(public text: string) {}
+}
 
 @Component({
   selector: 'app-todo-item',
@@ -9,7 +15,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
     </div>
   `
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent {
   @Input()
   item: any;
 
@@ -19,8 +25,6 @@ export class TodoItemComponent implements OnInit {
   toggle() {
     this.itemToggled.next(this.item);
   }
-
-  ngOnInit() {}
 }
 @Component({
   selector: 'app-todo-new-item',
@@ -28,36 +32,23 @@ export class TodoItemComponent implements OnInit {
     <form (ngSubmit)="add(); addItemForm.reset()" #addItemForm="ngForm">
       <div class="form-group">
         <label for="itemText">New item</label>
-        <input
-          type="text"
-          class="form-control"
-          required
-          [(ngModel)]="newItem"
-          name="itemText"
-          placeholder="Enter text"
-        />
+        <input type="text" class="form-control" required [(ngModel)]="newItem" name="itemText" placeholder="Enter text" />
       </div>
-      <button
-        type="submit"
-        class="btn btn-primary"
-        [disabled]="!addItemForm.form.valid"
-      >
+      <button type="submit" class="btn btn-primary" [disabled]="!addItemForm.form.valid">
         Login
       </button>
     </form>
   `
 })
-export class TodoNewItemComponent implements OnInit {
+export class TodoNewItemComponent {
   @Output()
   itemAdded = new EventEmitter();
 
   newItem = '';
 
   add() {
-    this.itemAdded.next({ id: 7, text: this.newItem });
+    this.itemAdded.next(new Item(this.newItem));
   }
-
-  ngOnInit() {}
 }
 
 const filters = {
@@ -71,15 +62,18 @@ const filters = {
   template: `
     <span *ngFor="let f of filters" (click)="filter = f"> {{ f }} </span>
     <app-todo-new-item (itemAdded)="add($event)"></app-todo-new-item>
-    <app-todo-item
-      *ngFor="let item of filteredItems"
-      [item]="item"
-      (itemToggled)="toggle($event)"
-    ></app-todo-item>
+    <app-todo-item *ngFor="let item of filteredItems" [item]="item" (itemToggled)="toggle($event)"></app-todo-item>
   `
 })
-export class TodoComponent implements OnInit {
-  items: any[];
+export class TodoComponent {
+  items = [
+    new Item('Do this first'),
+    new Item('Do that second'),
+    new Item('Do this third'),
+    new Item('Do that fourth'),
+    new Item('Do this fifth'),
+    new Item('Do that sixth')
+  ];
   filters = Object.keys(filters);
   filter = 'all';
 
@@ -89,16 +83,5 @@ export class TodoComponent implements OnInit {
 
   get filteredItems() {
     return this.items.filter(filters[this.filter]);
-  }
-
-  ngOnInit() {
-    this.items = [
-      { id: 0, text: 'Do this first' },
-      { id: 1, text: 'Do that second' },
-      { id: 2, text: 'Do this third' },
-      { id: 3, text: 'Do that fourth' },
-      { id: 4, text: 'Do this fifth' },
-      { id: 5, text: 'Do that sixth' }
-    ];
   }
 }
