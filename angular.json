@@ -18,7 +18,7 @@
             "main": "projects/ex00-new/src/main.ts",
             "polyfills": "projects/ex00-new/src/polyfills.ts",
             "tsConfig": "projects/ex00-new/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex00-new/src/favicon.ico", "projects/ex00-new/src/assets"],
             "styles": ["projects/ex00-new/src/styles.css"],
             "scripts": []
@@ -36,7 +36,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -45,6 +44,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -115,7 +118,7 @@
             "main": "projects/ex01-intro/src/main.ts",
             "polyfills": "projects/ex01-intro/src/polyfills.ts",
             "tsConfig": "projects/ex01-intro/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex01-intro/src/favicon.ico", "projects/ex01-intro/src/assets"],
             "styles": ["projects/ex01-intro/src/styles.css"],
             "scripts": []
@@ -133,7 +136,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -142,6 +144,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -212,7 +218,7 @@
             "main": "projects/ex02-component/src/main.ts",
             "polyfills": "projects/ex02-component/src/polyfills.ts",
             "tsConfig": "projects/ex02-component/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex02-component/src/favicon.ico", "projects/ex02-component/src/assets"],
             "styles": ["projects/ex02-component/src/styles.css"],
             "scripts": []
@@ -230,7 +236,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -239,6 +244,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -309,7 +318,7 @@
             "main": "projects/ex03-built-in-directives/src/main.ts",
             "polyfills": "projects/ex03-built-in-directives/src/polyfills.ts",
             "tsConfig": "projects/ex03-built-in-directives/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex03-built-in-directives/src/favicon.ico", "projects/ex03-built-in-directives/src/assets"],
             "styles": ["projects/ex03-built-in-directives/src/styles.css"],
             "scripts": []
@@ -327,7 +336,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -336,6 +344,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -406,7 +418,7 @@
             "main": "projects/ex04-events/src/main.ts",
             "polyfills": "projects/ex04-events/src/polyfills.ts",
             "tsConfig": "projects/ex04-events/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex04-events/src/favicon.ico", "projects/ex04-events/src/assets"],
             "styles": ["projects/ex04-events/src/styles.css"],
             "scripts": []
@@ -424,7 +436,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -433,6 +444,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -503,7 +518,7 @@
             "main": "projects/ex05-data-binding/src/main.ts",
             "polyfills": "projects/ex05-data-binding/src/polyfills.ts",
             "tsConfig": "projects/ex05-data-binding/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex05-data-binding/src/favicon.ico", "projects/ex05-data-binding/src/assets"],
             "styles": ["projects/ex05-data-binding/src/styles.css"],
             "scripts": []
@@ -521,7 +536,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -530,6 +544,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -600,7 +618,7 @@
             "main": "projects/ex06-forms/src/main.ts",
             "polyfills": "projects/ex06-forms/src/polyfills.ts",
             "tsConfig": "projects/ex06-forms/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex06-forms/src/favicon.ico", "projects/ex06-forms/src/assets"],
             "styles": ["projects/ex06-forms/src/styles.css"],
             "scripts": []
@@ -618,7 +636,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -627,6 +644,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -697,7 +718,7 @@
             "main": "projects/ex07-routing/src/main.ts",
             "polyfills": "projects/ex07-routing/src/polyfills.ts",
             "tsConfig": "projects/ex07-routing/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex07-routing/src/favicon.ico", "projects/ex07-routing/src/assets"],
             "styles": ["projects/ex07-routing/src/styles.css"],
             "scripts": []
@@ -715,7 +736,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -724,6 +744,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -794,7 +818,7 @@
             "main": "projects/ex08-service/src/main.ts",
             "polyfills": "projects/ex08-service/src/polyfills.ts",
             "tsConfig": "projects/ex08-service/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex08-service/src/favicon.ico", "projects/ex08-service/src/assets"],
             "styles": ["projects/ex08-service/src/styles.css"],
             "scripts": []
@@ -812,7 +836,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -821,6 +844,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -891,7 +918,7 @@
             "main": "projects/ex09-directive/src/main.ts",
             "polyfills": "projects/ex09-directive/src/polyfills.ts",
             "tsConfig": "projects/ex09-directive/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex09-directive/src/favicon.ico", "projects/ex09-directive/src/assets"],
             "styles": ["projects/ex09-directive/src/styles.css"],
             "scripts": []
@@ -909,7 +936,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -918,6 +944,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -988,7 +1018,7 @@
             "main": "projects/ex10-rxjs/src/main.ts",
             "polyfills": "projects/ex10-rxjs/src/polyfills.ts",
             "tsConfig": "projects/ex10-rxjs/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex10-rxjs/src/favicon.ico", "projects/ex10-rxjs/src/assets"],
             "styles": ["projects/ex10-rxjs/src/styles.css"],
             "scripts": []
@@ -1006,7 +1036,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -1015,6 +1044,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -1085,7 +1118,7 @@
             "main": "projects/ex11-async/src/main.ts",
             "polyfills": "projects/ex11-async/src/polyfills.ts",
             "tsConfig": "projects/ex11-async/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex11-async/src/favicon.ico", "projects/ex11-async/src/assets"],
             "styles": ["projects/ex11-async/src/styles.css"],
             "scripts": []
@@ -1103,7 +1136,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -1112,6 +1144,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -1182,7 +1218,7 @@
             "main": "projects/ex12-ngrx/src/main.ts",
             "polyfills": "projects/ex12-ngrx/src/polyfills.ts",
             "tsConfig": "projects/ex12-ngrx/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex12-ngrx/src/favicon.ico", "projects/ex12-ngrx/src/assets"],
             "styles": ["projects/ex12-ngrx/src/styles.css"],
             "scripts": []
@@ -1200,7 +1236,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -1209,6 +1244,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -1279,7 +1318,7 @@
             "main": "projects/ex13-ngrx-effects/src/main.ts",
             "polyfills": "projects/ex13-ngrx-effects/src/polyfills.ts",
             "tsConfig": "projects/ex13-ngrx-effects/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex13-ngrx-effects/src/favicon.ico", "projects/ex13-ngrx-effects/src/assets"],
             "styles": ["projects/ex13-ngrx-effects/src/styles.css"],
             "scripts": []
@@ -1297,7 +1336,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -1306,6 +1344,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -1376,7 +1418,7 @@
             "main": "projects/ex99-koans/src/main.ts",
             "polyfills": "projects/ex99-koans/src/polyfills.ts",
             "tsConfig": "projects/ex99-koans/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["projects/ex99-koans/src/favicon.ico", "projects/ex99-koans/src/assets"],
             "styles": ["projects/ex99-koans/src/styles.css"],
             "scripts": []
@@ -1394,7 +1436,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -1403,6 +1444,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
