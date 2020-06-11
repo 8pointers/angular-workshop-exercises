@@ -1,11 +1,11 @@
 # Modern Web Applications With Angular and TypeScript
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.
 
 ## Prerequisites
 
 - git client
-- NodeJS 12.5.0+ & NPM 6.9.0+
+- NodeJS 14.4.0+ & NPM 6.14.4+
 - Recommended Visual Studio Code extensions:
   - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
   - [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
