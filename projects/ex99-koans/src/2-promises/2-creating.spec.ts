@@ -1,10 +1,10 @@
 const __: any = 'replace me so that the test is passing';
-describe('Creating promises', function() {
-  const getResource = function(url: string) {
+describe('Creating promises', function () {
+  const getResource = function (url: string) {
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', url);
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
           if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200 || xhr.status === 304) {
               try {
@@ -21,19 +21,19 @@ describe('Creating promises', function() {
       });
     },
     leaderboardService = {
-      getLeaderboard: function() {
+      getLeaderboard: function () {
         return getResource('assets/leaderboard.json');
       },
-      getLeaderboardBadJSON: function() {
+      getLeaderboardBadJSON: function () {
         return getResource('assets/leaderboard-bad-json.json');
       },
-      getLeaderboard404: function() {
+      getLeaderboard404: function () {
         return getResource('assets/leaderboard-404.json');
-      }
+      },
     };
-  it('should understand resolve', function(done) {
+  it('should understand resolve', function (done) {
     leaderboardService.getLeaderboard().then(
-      leaderboard => {
+      (leaderboard) => {
         expect(leaderboard).toEqual(__);
         done();
       },
@@ -42,23 +42,23 @@ describe('Creating promises', function() {
       }
     );
   });
-  it('should understand reject (1)', function(done) {
+  it('should understand reject (1)', function (done) {
     leaderboardService.getLeaderboardBadJSON().then(
       () => {
         done.fail('This should not be executed');
       },
-      reason => {
+      (reason) => {
         expect(reason).toEqual(__);
         done();
       }
     );
   });
-  it('should understand reject (2)', function(done) {
+  it('should understand reject (2)', function (done) {
     leaderboardService.getLeaderboard404().then(
       () => {
         done.fail('This should not be executed');
       },
-      reason => {
+      (reason) => {
         expect(reason).toEqual(new Error(__));
         done();
       }

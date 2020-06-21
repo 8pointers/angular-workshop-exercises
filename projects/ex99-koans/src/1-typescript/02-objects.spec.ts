@@ -1,6 +1,6 @@
-describe('TypeScript :: objects :: ', function() {
+describe('TypeScript :: objects :: ', function () {
   const __: any = 'replace me so that the test is passing';
-  it('should understand object literals', function() {
+  it('should understand object literals', function () {
     const firstName = 'Myamoto';
     const lastName = 'Musashi';
     const age = 23;
@@ -9,15 +9,15 @@ describe('TypeScript :: objects :: ', function() {
       id: 1,
       name: `Mr. ${firstName} ${lastName}`,
       age,
-      [prefix + 'us']: 'active'
+      [prefix + 'us']: 'active',
     };
     expect(person).toEqual(__);
   });
-  it('should understand retrieving property values', function() {
+  it('should understand retrieving property values', function () {
     const person: any = {
       firstName: 'Myamoto',
       lastName: 'Musashi',
-      age: 23
+      age: 23,
     };
     const propertyName = 'firstName';
     const name = 'Name';
@@ -27,23 +27,23 @@ describe('TypeScript :: objects :: ', function() {
     expect(person['first' + name]).toBe(__);
     expect(person.propertyName).toBe(__);
   });
-  it('should understand destructuring', function() {
+  it('should understand destructuring', function () {
     const samurai = {
       id: 1,
       name: 'Myamoto Musashi',
       age: 32,
-      weapons: ['Katana']
+      weapons: ['Katana'],
     };
     const { name, age } = samurai;
     expect(name).toBe(__);
     expect(age).toBe(__);
   });
-  it('should understand destructuring and rest operator', function() {
+  it('should understand destructuring and rest operator', function () {
     const samurai = {
       id: 1,
       name: 'Myamoto Musashi',
       age: 32,
-      weapons: ['Katana']
+      weapons: ['Katana'],
     };
     const { weapons, ...person } = samurai;
     expect(weapons).toEqual(__);
@@ -55,11 +55,11 @@ describe('TypeScript :: objects :: ', function() {
     anotherSamurai.weapons.push('Tanto');
     expect(samurai).toEqual(__);
   });
-  it('should understand spread operator', function() {
+  it('should understand spread operator', function () {
     const person = {
       id: 1,
       name: 'Myamoto Musashi',
-      age: 32
+      age: 32,
     };
     const samurai1 = { ...person, weapons: ['Katana'] };
     expect(samurai1).toEqual(__);
@@ -68,15 +68,15 @@ describe('TypeScript :: objects :: ', function() {
     const samurai3 = { weapons: ['Katana'], age: 43, ...person };
     expect(samurai3).toEqual(__);
   });
-  it('should understand enumerating object properties', function() {
+  it('should understand enumerating object properties', function () {
     const person = {
       id: 1,
       name: 'Myamoto Musashi',
       age: 23,
       address: {
         street: 'Ninja Way',
-        postcode: '555-XX'
-      }
+        postcode: '555-XX',
+      },
     };
     expect(Object.keys(person)).toEqual(__);
     expect(Object.values(person)).toEqual(__);

@@ -1,7 +1,7 @@
 export const person2: any = {
-  setName: function(name: string) {
+  setName: function (name: string) {
     const names = name.split(' ');
-    const setFirstAndLastName = function(firstName, lastName) {
+    const setFirstAndLastName = function (firstName, lastName) {
       this.firstName = firstName;
       this.lastName = lastName;
     };
@@ -10,5 +10,5 @@ export const person2: any = {
     } else {
       setFirstAndLastName(names[0], names[1]);
     }
-  }
+  },
 };

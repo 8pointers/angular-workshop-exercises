@@ -1,6 +1,6 @@
-describe('TypeScript :: classes :: ', function() {
+describe('TypeScript :: classes :: ', function () {
   const __: any = 'replace me so that the test is passing';
-  it('should understand classes', function() {
+  it('should understand classes', function () {
     class Person {
       private static counter = 0;
       public readonly id: number;

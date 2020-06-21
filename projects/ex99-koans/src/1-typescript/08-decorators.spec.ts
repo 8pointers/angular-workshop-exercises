@@ -1,9 +1,9 @@
-describe('TypeScript :: Decorators :: ', function() {
+describe('TypeScript :: Decorators :: ', function () {
   const __: any = 'replace me so that the test is passing';
-  it('should understand method decorators', function() {
+  it('should understand method decorators', function () {
     function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
       const method = descriptor.value;
-      descriptor.value = function(...args) {
+      descriptor.value = function (...args) {
         console.log('Invoking', propertyName, 'with arguments:', ...args);
         return method.apply(this, arguments);
       };
@@ -22,11 +22,11 @@ describe('TypeScript :: Decorators :: ', function() {
     expect(result).toBe(__);
     expect(console.log).toHaveBeenCalledWith(__);
   });
-  it('should understand decorator factories', function() {
+  it('should understand decorator factories', function () {
     function slow(durationInMillis: number) {
-      return function(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
+      return function (target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
         const method = descriptor.value;
-        descriptor.value = function(...args) {
+        descriptor.value = function (...args) {
           const tsStart = Date.now();
           const result = method.apply(this, args);
           const duration = Date.now() - tsStart;
