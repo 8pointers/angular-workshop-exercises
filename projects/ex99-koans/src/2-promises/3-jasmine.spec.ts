@@ -25,7 +25,7 @@ describe('Simpler tests using jasmine-promises', function () {
         return getResource('assets/leaderboard.json');
       },
       getLeaderboardBadJSON: function () {
-        return getResource('assets/leaderboard-bad-json.json');
+        return getResource('assets/leaderboard.badjson');
       },
       getLeaderboard404: function () {
         return getResource('assets/leaderboard-404.json');
