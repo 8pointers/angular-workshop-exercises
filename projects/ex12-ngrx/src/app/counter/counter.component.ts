@@ -5,7 +5,7 @@ import { Increment } from './counter.actions';
 
 @Component({
   selector: 'app-counter',
-  template: ` <div><button (click)="increment()">Increment</button> {{ count$ | async }}</div> `
+  template: `<div><button (click)="increment()">Increment</button> {{ count$ | async }}</div>`
 })
 export class CounterComponent {
   count$: Observable<number>;
