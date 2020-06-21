@@ -14,7 +14,7 @@
     "ng": "ng",
     "generate": "ng generate",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build --prod=true",
+    "build": "ng build --baseHref=/app/ --prod=true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

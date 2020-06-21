@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex00-new",
+            "outputPath": "dist",
             "index": "projects/ex00-new/src/index.html",
             "main": "projects/ex00-new/src/main.ts",
             "polyfills": "projects/ex00-new/src/polyfills.ts",
@@ -114,7 +114,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex01-intro",
+            "outputPath": "dist",
             "index": "projects/ex01-intro/src/index.html",
             "main": "projects/ex01-intro/src/main.ts",
             "polyfills": "projects/ex01-intro/src/polyfills.ts",
@@ -215,7 +215,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex02-component",
+            "outputPath": "dist",
             "index": "projects/ex02-component/src/index.html",
             "main": "projects/ex02-component/src/main.ts",
             "polyfills": "projects/ex02-component/src/polyfills.ts",
@@ -316,7 +316,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex03-built-in-directives",
+            "outputPath": "dist",
             "index": "projects/ex03-built-in-directives/src/index.html",
             "main": "projects/ex03-built-in-directives/src/main.ts",
             "polyfills": "projects/ex03-built-in-directives/src/polyfills.ts",
@@ -417,7 +417,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex04-events",
+            "outputPath": "dist",
             "index": "projects/ex04-events/src/index.html",
             "main": "projects/ex04-events/src/main.ts",
             "polyfills": "projects/ex04-events/src/polyfills.ts",
@@ -518,7 +518,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex05-data-binding",
+            "outputPath": "dist",
             "index": "projects/ex05-data-binding/src/index.html",
             "main": "projects/ex05-data-binding/src/main.ts",
             "polyfills": "projects/ex05-data-binding/src/polyfills.ts",
@@ -619,7 +619,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex06-forms",
+            "outputPath": "dist",
             "index": "projects/ex06-forms/src/index.html",
             "main": "projects/ex06-forms/src/main.ts",
             "polyfills": "projects/ex06-forms/src/polyfills.ts",
@@ -720,7 +720,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex07-routing",
+            "outputPath": "dist",
             "index": "projects/ex07-routing/src/index.html",
             "main": "projects/ex07-routing/src/main.ts",
             "polyfills": "projects/ex07-routing/src/polyfills.ts",
@@ -821,7 +821,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex08-service",
+            "outputPath": "dist",
             "index": "projects/ex08-service/src/index.html",
             "main": "projects/ex08-service/src/main.ts",
             "polyfills": "projects/ex08-service/src/polyfills.ts",
@@ -922,7 +922,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex09-directive",
+            "outputPath": "dist",
             "index": "projects/ex09-directive/src/index.html",
             "main": "projects/ex09-directive/src/main.ts",
             "polyfills": "projects/ex09-directive/src/polyfills.ts",
@@ -1023,7 +1023,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex10-rxjs",
+            "outputPath": "dist",
             "index": "projects/ex10-rxjs/src/index.html",
             "main": "projects/ex10-rxjs/src/main.ts",
             "polyfills": "projects/ex10-rxjs/src/polyfills.ts",
@@ -1124,7 +1124,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex11-async",
+            "outputPath": "dist",
             "index": "projects/ex11-async/src/index.html",
             "main": "projects/ex11-async/src/main.ts",
             "polyfills": "projects/ex11-async/src/polyfills.ts",
@@ -1225,7 +1225,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex12-ngrx",
+            "outputPath": "dist",
             "index": "projects/ex12-ngrx/src/index.html",
             "main": "projects/ex12-ngrx/src/main.ts",
             "polyfills": "projects/ex12-ngrx/src/polyfills.ts",
@@ -1326,7 +1326,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex13-ngrx-effects",
+            "outputPath": "dist",
             "index": "projects/ex13-ngrx-effects/src/index.html",
             "main": "projects/ex13-ngrx-effects/src/main.ts",
             "polyfills": "projects/ex13-ngrx-effects/src/polyfills.ts",
@@ -1427,7 +1427,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ex99-koans",
+            "outputPath": "dist",
             "index": "projects/ex99-koans/src/index.html",
             "main": "projects/ex99-koans/src/main.ts",
             "polyfills": "projects/ex99-koans/src/polyfills.ts",
