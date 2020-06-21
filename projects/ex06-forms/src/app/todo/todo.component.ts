@@ -33,11 +33,7 @@ const filters = {
   selector: 'app-todo',
   template: `
     <span *ngFor="let f of filters" (click)="filter = f"> {{ f }} </span>
-    <app-todo-item
-      *ngFor="let item of filteredItems"
-      [item]="item"
-      (itemToggled)="toggle($event)"
-    ></app-todo-item>
+    <app-todo-item *ngFor="let item of filteredItems" [item]="item" (itemToggled)="toggle($event)"></app-todo-item>
   `
 })
 export class TodoComponent implements OnInit {

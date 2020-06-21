@@ -4,11 +4,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 export class Leaderboard1Service {
   public discipline = 'Pokemon';
 
-  private leaderboard = [
-    { name: 'Player One' },
-    { name: 'Player Two' },
-    { name: 'Player Three' }
-  ];
+  private leaderboard = [{ name: 'Player One' }, { name: 'Player Two' }, { name: 'Player Three' }];
 
   getLeaderboard(): any[] {
     return this.leaderboard;

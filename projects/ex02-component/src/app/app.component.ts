@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
     Your component should go in here...
     <h2>Exercise 2 - MessageOfTheDay</h2>
     Your component should go in here...
-  `,
+  `
 })
 export class AppComponent {}

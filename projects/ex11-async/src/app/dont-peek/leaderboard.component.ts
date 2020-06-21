@@ -24,9 +24,7 @@ export class LeaderboardService {
   }
 
   getPlayer2(id: number): Observable<any> {
-    return this.http
-      .get<any>(`assets/player/${id}.json`)
-      .pipe(map(player => ({ id, ...player })));
+    return this.http.get<any>(`assets/player/${id}.json`).pipe(map(player => ({ id, ...player })));
   }
 
   getLeaderboard2(): Observable<any[]> {
@@ -34,11 +32,7 @@ export class LeaderboardService {
   }
 
   getLeaderboardWithPlayers2(): Observable<any[]> {
-    return this.getLeaderboard2().pipe(
-      flatMap(leaderboard =>
-        forkJoin(...leaderboard.map(p => this.getPlayer2(p.id)))
-      )
-    );
+    return this.getLeaderboard2().pipe(flatMap(leaderboard => forkJoin(...leaderboard.map(p => this.getPlayer2(p.id)))));
   }
 }
 
@@ -47,13 +41,9 @@ export class LeaderboardService {
   providers: [LeaderboardService],
   template: `
     <h1>Leaderboard 1</h1>
-    <div *ngFor="let player of (players1 | async); let i = index">
-      {{ i + 1 }}. {{ player.name }} ({{ player.id }})
-    </div>
+    <div *ngFor="let player of players1 | async; let i = index">{{ i + 1 }}. {{ player.name }} ({{ player.id }})</div>
     <h1>Leaderboard 2</h1>
-    <div *ngFor="let player of (players2 | async); let i = index">
-      {{ i + 1 }}. {{ player.name }} ({{ player.id }})
-    </div>
+    <div *ngFor="let player of players2 | async; let i = index">{{ i + 1 }}. {{ player.name }} ({{ player.id }})</div>
   `
 })
 export class LeaderboardComponent implements OnInit {

@@ -1,17 +1,17 @@
 describe('TypeScript :: adventures in pointfree world :: ', function () {
   const __: any = 'replace me so that the test is passing';
 
-  const add = (a) => (b) => a + b;
-  const mod = (a) => (b) => a % b;
-  const gte = (a) => (b) => b >= a;
-  const pick = (propertyName) => (object) => object[propertyName];
-  const isTruthy = (x) => !!x;
-  const not = (f) => (x) => !f(x);
-  const flip = (f) => (a) => (b) => f(b)(a);
-  const map = (f) => (xs) => xs.map(f);
-  const filter = (f) => (xs) => xs.filter(f);
-  const pipe = (...fs) => (x) => fs.reduce((acc, f) => f(acc), x);
-  const compose = (...fs) => (x) => fs.reduceRight((acc, f) => f(acc), x);
+  const add = a => b => a + b;
+  const mod = a => b => a % b;
+  const gte = a => b => b >= a;
+  const pick = propertyName => object => object[propertyName];
+  const isTruthy = x => !!x;
+  const not = f => x => !f(x);
+  const flip = f => a => b => f(b)(a);
+  const map = f => xs => xs.map(f);
+  const filter = f => xs => xs.filter(f);
+  const pipe = (...fs) => x => fs.reduce((acc, f) => f(acc), x);
+  const compose = (...fs) => x => fs.reduceRight((acc, f) => f(acc), x);
 
   it('should understand pointfree', function () {
     const inc = add(1);
@@ -24,8 +24,8 @@ describe('TypeScript :: adventures in pointfree world :: ', function () {
       age: 23,
       address: {
         street: 'Ninja Way',
-        postcode: 'XX',
-      },
+        postcode: 'XX'
+      }
     };
     expect(getStreet(person)).toBe(__);
 
@@ -43,8 +43,8 @@ describe('TypeScript :: adventures in pointfree world :: ', function () {
       age: 23,
       address: {
         street: 'Ninja Way',
-        postcode: 'XX',
-      },
+        postcode: 'XX'
+      }
     };
     expect(getStreet(person)).toBe(__);
   });
@@ -55,7 +55,7 @@ describe('TypeScript :: adventures in pointfree world :: ', function () {
       { id: 1, name: 'Second', balance: 0 },
       { id: 1, name: 'Third', balance: -12.34 },
       { id: 1, name: 'Fourth', balance: 67.89 },
-      { id: 1, name: 'Fifth', balance: -1000 },
+      { id: 1, name: 'Fifth', balance: -1000 }
     ];
     expect(overdraftAccountHolderNames(accounts)).toEqual(__);
   });

@@ -29,11 +29,11 @@ describe('Creating promises', function () {
       },
       getLeaderboard404: function () {
         return getResource('assets/leaderboard-404.json');
-      },
+      }
     };
   it('should understand resolve', function (done) {
     leaderboardService.getLeaderboard().then(
-      (leaderboard) => {
+      leaderboard => {
         expect(leaderboard).toEqual(__);
         done();
       },
@@ -47,7 +47,7 @@ describe('Creating promises', function () {
       () => {
         done.fail('This should not be executed');
       },
-      (reason) => {
+      reason => {
         expect(reason).toEqual(__);
         done();
       }
@@ -58,7 +58,7 @@ describe('Creating promises', function () {
       () => {
         done.fail('This should not be executed');
       },
-      (reason) => {
+      reason => {
         expect(reason).toEqual(new Error(__));
         done();
       }

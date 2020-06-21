@@ -31,23 +31,23 @@ describe('TypeScript :: arrays :: ', function () {
       { name: 'First', age: 34 },
       { name: 'Second', age: 56 },
       { name: 'Third', age: 23 },
-      { name: 'Fourth', age: 45 },
+      { name: 'Fourth', age: 45 }
     ];
     expect(people.sort((p1, p2) => p2.age - p1.age)).toEqual(__);
   });
   it('should understand Array.prototype.map', function () {
-    expect([1, 2, 3, 4, 5].map((x) => x * x)).toEqual(__);
+    expect([1, 2, 3, 4, 5].map(x => x * x)).toEqual(__);
     const people = [
       { name: 'First', age: 12 },
       { name: 'Second', age: 23 },
-      { name: 'Third', age: 34 },
+      { name: 'Third', age: 34 }
     ];
     expect(people.map(({ name, ...rest }) => ({ name: `Mr. ${name}`, ...rest }))).toEqual(__);
   });
   it('should understand Array.prototype.flatMap', function () {
     const numbers = [1, 2, 3];
     const letters = ['a', 'b', 'c', 'd'];
-    expect(numbers.flatMap((n) => letters.map((l) => [n, l]))).toEqual(__);
+    expect(numbers.flatMap(n => letters.map(l => [n, l]))).toEqual(__);
 
     const people = [
       { id: 1, name: 'First', addresses: [{ street: '1 Ninja Way', postcode: '555-XX' }] },
@@ -57,32 +57,32 @@ describe('TypeScript :: arrays :: ', function () {
         addresses: [
           { street: '22 Ninja Way', postcode: '555-YY' },
           { street: '23 Ninja Way', postcode: '555-YY' },
-          { street: '24 Ninja Way', postcode: '555-YY' },
-        ],
+          { street: '24 Ninja Way', postcode: '555-YY' }
+        ]
       },
       {
         id: 1,
         name: 'Third',
         addresses: [
           { street: '33 Ninja Way', postcode: '555-ZZ' },
-          { street: '34 Ninja Way', postcode: '555-ZZ' },
-        ],
-      },
+          { street: '34 Ninja Way', postcode: '555-ZZ' }
+        ]
+      }
     ];
-    expect(people.map((person) => person.addresses)).toEqual(__);
-    expect(people.flatMap((person) => person.addresses)).toEqual(__);
+    expect(people.map(person => person.addresses)).toEqual(__);
+    expect(people.flatMap(person => person.addresses)).toEqual(__);
   });
   it('should understand Array.prototype.filter', function () {
-    expect([1, 2, 3, 4, 5].filter((x) => x % 2)).toEqual(__);
+    expect([1, 2, 3, 4, 5].filter(x => x % 2)).toEqual(__);
     const people = [
       { name: 'First', age: 12 },
       { name: 'Second', age: 23 },
-      { name: 'Third', age: 34 },
+      { name: 'Third', age: 34 }
     ];
     expect(people.filter(({ age }) => age >= 21)).toEqual(__);
   });
   it('should understand Array.prototype methods chaining', function () {
-    const ngClass = (classes) =>
+    const ngClass = classes =>
       Object.entries(classes)
         .filter(([, isOn]) => isOn)
         .map(([className]) => className)
@@ -100,18 +100,18 @@ describe('TypeScript :: arrays :: ', function () {
     expect(arr.reduce((acc, x) => Math.min(acc, x), Infinity)).toBe(__);
     expect(arr.reduce((acc, x) => Math.max(acc, x), -Infinity)).toBe(__);
 
-    const mysteryF1 = (fn) => (xs) => xs.reduce((acc, x) => [...acc, fn(x)], []);
-    expect(mysteryF1((x) => x * x)(arr)).toEqual(__);
+    const mysteryF1 = fn => xs => xs.reduce((acc, x) => [...acc, fn(x)], []);
+    expect(mysteryF1(x => x * x)(arr)).toEqual(__);
 
-    const mysteryF2 = (fn) => (xs) => xs.reduce((acc, x) => (fn(x) ? [...acc, x] : acc), []);
-    expect(mysteryF2((x) => x % 2)(arr)).toEqual(__);
+    const mysteryF2 = fn => xs => xs.reduce((acc, x) => (fn(x) ? [...acc, x] : acc), []);
+    expect(mysteryF2(x => x % 2)(arr)).toEqual(__);
 
-    const addUp = (transactions) =>
+    const addUp = transactions =>
       Object.values(
         transactions.reduce(
           ({ [accountId]: current, ...rest }, { accountId, amount }) => ({
             ...rest,
-            [accountId]: { accountId, amount: amount + ((current && current.amount) || 0) },
+            [accountId]: { accountId, amount: amount + ((current && current.amount) || 0) }
           }),
           {}
         )
@@ -122,7 +122,7 @@ describe('TypeScript :: arrays :: ', function () {
       { id: 3, accountId: 1, amount: 30 },
       { id: 4, accountId: 3, amount: 40 },
       { id: 5, accountId: 2, amount: 50 },
-      { id: 6, accountId: 1, amount: 60 },
+      { id: 6, accountId: 1, amount: 60 }
     ];
     expect(addUp(someTransactions)).toEqual(__);
   });
@@ -133,7 +133,7 @@ describe('TypeScript :: arrays :: ', function () {
       { name: 'Third', age: 22, balance: 400 },
       { name: 'Fourth', age: 14, balance: 1000 },
       { name: 'Fifth', age: 24, balance: 100 },
-      { name: 'Sixth', age: 26, balance: 200 },
+      { name: 'Sixth', age: 26, balance: 200 }
     ];
     const result = people
       .filter(({ age }) => age >= 18)

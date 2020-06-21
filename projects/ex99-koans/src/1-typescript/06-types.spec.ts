@@ -18,7 +18,7 @@ describe('TypeScript :: Types :: ', function () {
     expect(third).toEqual(__);
 
     const names = ['First', 'Second', 'Third'];
-    expect(names.map((x) => 'Mr. ' + x)).toEqual(__);
+    expect(names.map(x => 'Mr. ' + x)).toEqual(__);
     // expect(names.map(x => 3 - x)).toEqual(__);
   });
   it('should understand interfaces define the shape of the object', function () {

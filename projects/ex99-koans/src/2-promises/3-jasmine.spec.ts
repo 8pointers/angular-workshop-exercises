@@ -29,12 +29,12 @@ describe('Simpler tests using jasmine-promises', function () {
       },
       getLeaderboard404: function () {
         return getResource('assets/leaderboard-404.json');
-      },
+      }
     };
   it('should understand resolve', function () {
-    return leaderboardService.getLeaderboard().then((leaderboard) => expect(leaderboard).toEqual(__));
+    return leaderboardService.getLeaderboard().then(leaderboard => expect(leaderboard).toEqual(__));
   });
   it('should understand reject (1)', function () {
-    return leaderboardService.getLeaderboardBadJSON().catch((reason) => expect(reason).toEqual(new Error(__)));
+    return leaderboardService.getLeaderboardBadJSON().catch(reason => expect(reason).toEqual(new Error(__)));
   });
 });

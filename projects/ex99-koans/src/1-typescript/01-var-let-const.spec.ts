@@ -74,7 +74,7 @@ describe('TypeScript :: var, let, const :: ', function () {
   it('should understand const vs immutability', function () {
     const person = {
       firstName: 'Hello',
-      lastName: 'World',
+      lastName: 'World'
     };
     expect(person).toEqual(__);
     person.firstName = 'Hi';

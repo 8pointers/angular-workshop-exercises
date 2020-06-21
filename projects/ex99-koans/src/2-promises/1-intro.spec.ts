@@ -6,7 +6,7 @@ describe('Using promise-based API', function () {
     },
     getLeaderboard2: function () {
       return fetch('assets/leaderboard2.json').then((response: any) => response.json());
-    },
+    }
   };
   it('should understand how async values can be represented using promises', function (done) {
     leaderboardService.getLeaderboard().then(

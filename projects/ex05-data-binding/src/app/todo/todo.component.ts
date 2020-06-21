@@ -2,9 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-todo-item',
-  template: `
-    <div (click)="remove()">{{ item.text }}</div>
-  `
+  template: ` <div (click)="remove()">{{ item.text }}</div> `
 })
 export class TodoItemComponent implements OnInit {
   @Input()
@@ -22,13 +20,7 @@ export class TodoItemComponent implements OnInit {
 
 @Component({
   selector: 'app-todo',
-  template: `
-    <app-todo-item
-      *ngFor="let item of items"
-      [item]="item"
-      (itemRemoved)="remove($event)"
-    ></app-todo-item>
-  `
+  template: ` <app-todo-item *ngFor="let item of items" [item]="item" (itemRemoved)="remove($event)"></app-todo-item> `
 })
 export class TodoComponent implements OnInit {
   items: any[];

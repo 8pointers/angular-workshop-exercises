@@ -21,12 +21,12 @@ describe('Promise.all', function () {
     });
   };
   it('should understand Promise.all', function () {
-    return Promise.all([getResource('assets/player/1.json'), getResource('assets/player/7.json')]).then((result) =>
+    return Promise.all([getResource('assets/player/1.json'), getResource('assets/player/7.json')]).then(result =>
       expect(result).toEqual(__)
     );
   });
   it('should understand how Promise.all deals with rejections', function () {
-    return Promise.all([getResource('assets/player/brake-it.json'), getResource('assets/player/7.json')]).catch((reason) =>
+    return Promise.all([getResource('assets/player/brake-it.json'), getResource('assets/player/7.json')]).catch(reason =>
       expect(reason).toEqual(__)
     );
   });

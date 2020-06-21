@@ -38,13 +38,9 @@ export class LeaderboardService {
   providers: [LeaderboardService],
   template: `
     <h1>Leaderboard 1</h1>
-    <div *ngFor="let player of (players1 | async); let i = index">
-      {{ i + 1 }}. {{ player.name }} ({{ player.id }})
-    </div>
+    <div *ngFor="let player of players1 | async; let i = index">{{ i + 1 }}. {{ player.name }} ({{ player.id }})</div>
     <h1>Leaderboard 2</h1>
-    <div *ngFor="let player of (players2 | async); let i = index">
-      {{ i + 1 }}. {{ player.name }} ({{ player.id }})
-    </div>
+    <div *ngFor="let player of players2 | async; let i = index">{{ i + 1 }}. {{ player.name }} ({{ player.id }})</div>
   `
 })
 export class LeaderboardComponent implements OnInit {

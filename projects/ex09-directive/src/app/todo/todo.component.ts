@@ -18,9 +18,7 @@ export class TodoService {
 @Component({
   selector: 'app-todo-item',
   styleUrls: ['./todo.component.css'],
-  template: `
-    <div [ngClass]="{ done: item.isDone }" (click)="todoService.toggle(item)">{{ item.text }}</div>
-  `
+  template: ` <div [ngClass]="{ done: item.isDone }" (click)="todoService.toggle(item)">{{ item.text }}</div> `
 })
 export class TodoItemComponent {
   @Input()

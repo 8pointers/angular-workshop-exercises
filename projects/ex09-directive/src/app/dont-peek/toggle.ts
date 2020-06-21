@@ -1,11 +1,4 @@
-import {
-  Directive,
-  ElementRef,
-  EventEmitter,
-  HostListener,
-  Injectable,
-  Input
-} from '@angular/core';
+import { Directive, ElementRef, EventEmitter, HostListener, Injectable, Input } from '@angular/core';
 
 @Injectable()
 export class ToggleService {

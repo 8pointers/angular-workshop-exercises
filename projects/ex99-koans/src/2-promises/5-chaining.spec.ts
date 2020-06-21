@@ -23,20 +23,20 @@ describe('Chaining', function () {
   it('should understand chaining', function () {
     return getResource('assets/player/1.json')
       .then((player: any) => player.name)
-      .then((result) => expect(result).toBe(__))
-      .catch((reason) => console.log('This should not be reached', reason));
+      .then(result => expect(result).toBe(__))
+      .catch(reason => console.log('This should not be reached', reason));
   });
   it('should understand chaining 2', function () {
     return getResource('assets/leaderboard.json')
       .then((leaderboard: any) => getResource(`assets/player/${leaderboard[0].id}.json`))
       .then((player: any) => player.name)
-      .then((result) => expect(result).toBe(__))
-      .catch((reason) => console.log('This should not be reached', reason));
+      .then(result => expect(result).toBe(__))
+      .catch(reason => console.log('This should not be reached', reason));
   });
   it('should understand chaining 3', function () {
     return getResource('assets/leaderboard.json')
       .then((leaderboard: any) => getResource(`assets/player/${leaderboard[5]}.json`))
       .then((player: any) => player.name)
-      .catch((reason) => expect(reason).toEqual(__));
+      .catch(reason => expect(reason).toEqual(__));
   });
 });

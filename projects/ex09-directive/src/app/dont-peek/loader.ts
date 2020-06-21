@@ -12,8 +12,8 @@ export function loader(options?: any) {
       operationsInProgress[operationName] = true;
       if (result.then) {
         result.then(
-          () => operationsInProgress[operationName] = false,
-          () => operationsInProgress[operationName] = false
+          () => (operationsInProgress[operationName] = false),
+          () => (operationsInProgress[operationName] = false)
         );
       }
       return result;
@@ -35,6 +35,5 @@ export class LoaderComponent implements OnInit {
     this.operationsInProgress = operationsInProgress;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

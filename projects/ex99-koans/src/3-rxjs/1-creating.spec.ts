@@ -14,8 +14,8 @@ describe('Creating observables', function () {
     });
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
@@ -24,8 +24,8 @@ describe('Creating observables', function () {
     const o$ = from([1, 2, 3, 4, 5]);
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
@@ -34,8 +34,8 @@ describe('Creating observables', function () {
     const o$ = range(1, 10);
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
@@ -45,8 +45,8 @@ describe('Creating observables', function () {
     const result = [];
     const o$ = fromEvent(anElement, 'click');
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     anElement.click();
@@ -57,8 +57,8 @@ describe('Creating observables', function () {
     const o$ = interval(100);
     const result = [];
     const subscription = o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     setTimeout(() => {
@@ -71,8 +71,8 @@ describe('Creating observables', function () {
     const o$ = ajax.getJSON('assets/player/1.json');
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => {
         result.push('complete');
         expect(result).toEqual(__);

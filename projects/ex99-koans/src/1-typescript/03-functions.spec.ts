@@ -53,7 +53,7 @@ describe('Typescript :: functions :: ', function () {
         name: 'First',
         setName: function (name) {
           this.name = name;
-        },
+        }
       };
       expect(person.name).toBe(__);
 
@@ -93,7 +93,7 @@ describe('Typescript :: functions :: ', function () {
     const testFunction = function () {
       const person = {
         name: 'First',
-        setName: (name) => (this.name = name),
+        setName: name => (this.name = name)
       };
       expect(person.name).toBe(__);
 
@@ -140,7 +140,7 @@ describe('Typescript :: functions :: ', function () {
       name: 'First',
       setName: function (name) {
         this.name = name;
-      },
+      }
     };
 
     const setName = person.setName;
@@ -172,7 +172,7 @@ describe('Typescript :: functions :: ', function () {
         } else {
           setFirstAndLastName(names[0], names[1]);
         }
-      },
+      }
     };
     person1.setName('Mr Myamoto Musashi');
     expect(person1.firstName).toBe(__);
@@ -193,7 +193,7 @@ describe('Typescript :: functions :: ', function () {
         } else {
           setFirstAndLastName(names[0], names[1]);
         }
-      },
+      }
     };
     person3.setName('Mr Myamoto Musashi');
     expect(person3.firstName).toBe(__);
@@ -211,7 +211,7 @@ describe('Typescript :: functions :: ', function () {
         } else {
           setFirstAndLastName(names[0], names[1]);
         }
-      },
+      }
     };
     person4.setName('Mr Myamoto Musashi');
     expect(person4.firstName).toBe(__);
@@ -229,7 +229,7 @@ describe('Typescript :: functions :: ', function () {
         } else {
           setFirstAndLastName(names[0], names[1]);
         }
-      },
+      }
     };
     person5.setName('Mr Myamoto Musashi');
     expect(person5.firstName).toBe(__);
@@ -245,11 +245,11 @@ describe('Typescript :: functions :: ', function () {
     const inc = add(1);
     expect(inc(123)).toBe(__);
 
-    const pick = (propertyName) => (object) => object[propertyName];
+    const pick = propertyName => object => object[propertyName];
     const getName = pick('name');
     const person = {
       name: 'Myamoto',
-      age: 23,
+      age: 23
     };
     expect(getName(person)).toBe(__);
   });

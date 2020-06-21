@@ -20,8 +20,8 @@ describe('Redux', function () {
     const result = [];
 
     state$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
 
@@ -39,18 +39,18 @@ describe('Redux', function () {
       }
       return state;
     };
-    const ofType = (t) => filter(({ type }) => type === t);
+    const ofType = t => filter(({ type }) => type === t);
     const fetchPlayer$ = action$.pipe(
       ofType('FETCH_PLAYER'),
       flatMap(({ playerId }: any) => ajax.getJSON(`assets/player/${playerId}.json`)),
-      map((player) => ({ type: 'PLAYER_RECEIVED', player }))
+      map(player => ({ type: 'PLAYER_RECEIVED', player }))
     );
     const state$ = merge(action$, fetchPlayer$).pipe(scan(reducer, undefined));
     const result = [];
 
     state$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => {
         result.push('complete');
         expect(result).toEqual(__);

@@ -43,23 +43,19 @@ export class MessageOfTheDayComponent implements OnInit {
   constructor(private messageOfTheDayService: MessageOfTheDayService) {}
 
   ngOnInit() {
-    this.messageOfTheDayService
-      .getWithFetch()
-      .then(
-        message => (this.message1 = message),
-        reason => (this.reason = reason)
-      );
+    this.messageOfTheDayService.getWithFetch().then(
+      message => (this.message1 = message),
+      reason => (this.reason = reason)
+    );
 
     this.message2 = this.messageOfTheDayService.getWithFetch();
 
     this.message3 = this.messageOfTheDayService.getWithHttpAsPromise();
 
-    this.messageOfTheDayService
-      .getWithHttpAsObservable()
-      .subscribe(
-        message => (this.message4 = message),
-        reason => (this.reason = reason)
-      );
+    this.messageOfTheDayService.getWithHttpAsObservable().subscribe(
+      message => (this.message4 = message),
+      reason => (this.reason = reason)
+    );
 
     this.message5 = this.messageOfTheDayService.getWithHttpAsObservable();
   }

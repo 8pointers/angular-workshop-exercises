@@ -5,21 +5,21 @@ const __: any = 'replace me so that the test is passing';
 
 describe('Transforming observables', function () {
   it('should understand map', function () {
-    const o$ = range(1, 5).pipe(map((x) => 2 * x));
+    const o$ = range(1, 5).pipe(map(x => 2 * x));
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
   });
   it('should understand filter', function () {
-    const o$ = range(1, 5).pipe(filter((x) => x % 2 === 0));
+    const o$ = range(1, 5).pipe(filter(x => x % 2 === 0));
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
@@ -28,8 +28,8 @@ describe('Transforming observables', function () {
     const o$ = range(1, 5).pipe(reduce((acc, x) => acc + x, 0));
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
@@ -38,8 +38,8 @@ describe('Transforming observables', function () {
     const o$ = interval(10).pipe(reduce((acc, x) => acc + x, 0));
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     setTimeout(() => {
@@ -51,8 +51,8 @@ describe('Transforming observables', function () {
     const o$ = range(1, 5).pipe(scan((acc, x) => acc + x, 0));
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     expect(result).toEqual(__);
@@ -61,8 +61,8 @@ describe('Transforming observables', function () {
     const o$ = interval(10).pipe(scan((acc, x) => acc + x, 0));
     const result = [];
     o$.subscribe(
-      (value) => result.push(value),
-      (error) => result.push(error),
+      value => result.push(value),
+      error => result.push(error),
       () => result.push('complete')
     );
     setTimeout(() => {

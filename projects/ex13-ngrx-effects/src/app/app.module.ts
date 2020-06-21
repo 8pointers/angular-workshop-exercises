@@ -15,13 +15,7 @@ import { MotdEffects } from './motd/motd.effects';
 import { motdReducer } from './motd/motd.reducer';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CounterComponent,
-    MotdComponent,
-    GameOfLifeComponent,
-    CellsPipe
-  ],
+  declarations: [AppComponent, CounterComponent, MotdComponent, GameOfLifeComponent, CellsPipe],
   imports: [
     BrowserModule,
     FormsModule,

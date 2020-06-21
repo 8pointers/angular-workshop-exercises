@@ -7,13 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { TodoComponent, TodoItemComponent } from './todo/todo.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    GameOfLifeComponent,
-    TodoComponent,
-    TodoItemComponent
-  ],
+  declarations: [AppComponent, LoginComponent, GameOfLifeComponent, TodoComponent, TodoItemComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@ import { Refresh } from './motd.actions';
   template: `
     <div>
       <button (click)="refresh()">Refresh</button> <br />
-      <div *ngIf="(isLoading$ | async) as isLoading; else message">
+      <div *ngIf="isLoading$ | async as isLoading; else message">
         Loading...
       </div>
       <ng-template #message>{{ message$ | async }}</ng-template>

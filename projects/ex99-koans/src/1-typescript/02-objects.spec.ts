@@ -9,7 +9,7 @@ describe('TypeScript :: objects :: ', function () {
       id: 1,
       name: `Mr. ${firstName} ${lastName}`,
       age,
-      [prefix + 'us']: 'active',
+      [prefix + 'us']: 'active'
     };
     expect(person).toEqual(__);
   });
@@ -17,7 +17,7 @@ describe('TypeScript :: objects :: ', function () {
     const person: any = {
       firstName: 'Myamoto',
       lastName: 'Musashi',
-      age: 23,
+      age: 23
     };
     const propertyName = 'firstName';
     const name = 'Name';
@@ -32,7 +32,7 @@ describe('TypeScript :: objects :: ', function () {
       id: 1,
       name: 'Myamoto Musashi',
       age: 32,
-      weapons: ['Katana'],
+      weapons: ['Katana']
     };
     const { name, age } = samurai;
     expect(name).toBe(__);
@@ -43,7 +43,7 @@ describe('TypeScript :: objects :: ', function () {
       id: 1,
       name: 'Myamoto Musashi',
       age: 32,
-      weapons: ['Katana'],
+      weapons: ['Katana']
     };
     const { weapons, ...person } = samurai;
     expect(weapons).toEqual(__);
@@ -59,7 +59,7 @@ describe('TypeScript :: objects :: ', function () {
     const person = {
       id: 1,
       name: 'Myamoto Musashi',
-      age: 32,
+      age: 32
     };
     const samurai1 = { ...person, weapons: ['Katana'] };
     expect(samurai1).toEqual(__);
@@ -75,8 +75,8 @@ describe('TypeScript :: objects :: ', function () {
       age: 23,
       address: {
         street: 'Ninja Way',
-        postcode: '555-XX',
-      },
+        postcode: '555-XX'
+      }
     };
     expect(Object.keys(person)).toEqual(__);
     expect(Object.values(person)).toEqual(__);

@@ -4,19 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GameOfLifeComponent } from './game-of-life/game-of-life.component';
 import { Leaderboard1Component } from './leaderboard-1';
-import {
-  Leaderboard2Component,
-  LeaderboardIndex2Component
-} from './leaderboard-2';
-import {
-  Leaderboard3Component,
-  LeaderboardIndex3Component
-} from './leaderboard-3';
-import {
-  TodoComponent,
-  TodoItemComponent,
-  TodoNewItemComponent
-} from './todo/todo.component';
+import { Leaderboard2Component, LeaderboardIndex2Component } from './leaderboard-2';
+import { Leaderboard3Component, LeaderboardIndex3Component } from './leaderboard-3';
+import { TodoComponent, TodoItemComponent, TodoNewItemComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [

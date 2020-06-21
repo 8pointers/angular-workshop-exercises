@@ -10,5 +10,5 @@ export const person2: any = {
     } else {
       setFirstAndLastName(names[0], names[1]);
     }
-  },
+  }
 };

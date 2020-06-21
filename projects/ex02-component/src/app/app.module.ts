@@ -6,6 +6,6 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 @NgModule({
   declarations: [AppComponent, HelloWorldComponent],
   imports: [BrowserModule],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
