@@ -1,0 +1,9 @@
+.error {
+  background-color: yellow;
+}
+.loggedIn {
+  color: blue;
+}
+.vip {
+  text-decoration: underline;
+}

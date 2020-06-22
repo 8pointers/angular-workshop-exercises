@@ -1,7 +1,9 @@
+.error {
+  background-color: red;
+}
 .loggedIn {
   color: blue;
 }
-
 .vip {
-  text-decoration: underline;
+  text-decoration: line-through;
 }

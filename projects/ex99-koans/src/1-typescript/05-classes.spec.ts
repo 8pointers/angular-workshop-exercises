@@ -1,3 +1,4 @@
+// tslint:disable:only-arrow-functions
 describe('TypeScript :: classes :: ', function () {
   const __: any = 'replace me so that the test is passing';
   it('should understand classes', function () {

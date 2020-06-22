@@ -1,3 +1,4 @@
+// tslint:disable:no-string-literal object-literal-shorthand only-arrow-functions prefer-const
 describe('Typescript :: functions :: ', function () {
   const __: any = 'replace me so that the test is passing';
   it('should understand normal and fat-arrow functions', function () {
@@ -32,8 +33,8 @@ describe('Typescript :: functions :: ', function () {
   });
   it('should understand rest parameters', function () {
     const format1 = function (template, ...params) {
-      for (let i = 0; i < params.length; i++) {
-        template = template.replace('%', params[i]);
+      for (const param of params) {
+        template = template.replace('%', param);
       }
       return template;
     };

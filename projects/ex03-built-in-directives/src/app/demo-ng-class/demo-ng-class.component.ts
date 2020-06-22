@@ -2,27 +2,25 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-demo-ng-class',
-  template: `
-    <div class="{{ (normalUser ? 'loggedIn' : '') + (normalUser?.vip ? ' vip' : '') }}">
-      Motivation
+  template: `<div [ngClass]="{ error: error, loggedIn: user, vip: user?.vip }">
+      {{ user?.name || 'Plase login...' }}
     </div>
-    <div [ngClass]="{ loggedIn: noUser, vip: noUser?.vip }">
-      {{ noUser?.name || 'Plase login...' }}
-    </div>
-    <div [ngClass]="{ loggedIn: normalUser, vip: normalUser?.vip }">
-      {{ normalUser?.name || 'Plase login...' }}
-    </div>
-    <div [ngClass]="{ loggedIn: vipUser, vip: vipUser?.vip }">
-      {{ vipUser?.name || 'Plase login...' }}
-    </div>
-    <div [ngClass]="['loggedIn', 'vip']">With Array</div>
+    <div [ngClass]="['loggedIn', 'vip', dynamic]">With Array</div>
     <div [ngClass]="'loggedIn vip'">With String</div>
-    <div ngClass="loggedIn vip">No binding</div>
-  `,
+    <div ngClass="loggedIn vip dynamic">No binding</div>`,
   styleUrls: ['./demo-ng-class.component.css']
 })
 export class DemoNgClassComponent {
-  noUser = null;
-  normalUser = { name: 'Myamoto', vip: false };
-  vipUser = { name: 'Hattori', vip: true };
+  error = 'Unexpected error occurred.';
+  user = { name: 'Myamoto', vip: true };
+  // error = '';
+  // user = { name: 'Myamoto', vip: true };
+  // error = '';
+  // user = { name: 'Myamoto' };
+  // error = '';
+  // user = undefined;
+  dynamic = 'error';
+  constructor() {
+    setInterval(() => (this.dynamic = this.dynamic ? '' : 'error'), 500); // Bad idea!!!
+  }
 }

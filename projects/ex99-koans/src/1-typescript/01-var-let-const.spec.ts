@@ -1,4 +1,4 @@
-// tslint:disable:no-shadowed-variable no-var-keyword prefer-const
+// tslint:disable:only-arrow-functions no-shadowed-variable no-var-keyword prefer-const
 describe('TypeScript :: var, let, const :: ', function () {
   const __: any = 'replace me so that the test is passing';
   it('should understand functional vs block scope', function () {

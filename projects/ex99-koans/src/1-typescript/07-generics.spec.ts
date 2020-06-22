@@ -1,3 +1,4 @@
+// tslint:disable:only-arrow-functions
 describe('TypeScript :: Generics :: ', function () {
   const __: any = 'replace me so that the test is passing';
   it('should understand generic functions', function () {
@@ -32,7 +33,7 @@ describe('TypeScript :: Generics :: ', function () {
     const maybe = function <A, B>(v: B, f: (x: A) => B, m: Maybe<A>) {
       return m.isNothing ? v : m.fold(f);
     };
-    const safeGetName = function (person: { name?: string; age: number }): Maybe<String> {
+    const safeGetName = function (person: { name?: string; age: number }): Maybe<string> {
       return Maybe.of(person.name).map(name => `Mr. ${name}`);
     };
     expect(maybe('N/A', s => s, safeGetName({ name: 'Myamoto Musashi', age: 23 }))).toBe(__);

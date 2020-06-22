@@ -1,3 +1,4 @@
+// tslint:disable:only-arrow-functions
 describe('TypeScript :: adventures in pointfree world :: ', function () {
   const __: any = 'replace me so that the test is passing';
 

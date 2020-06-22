@@ -1,3 +1,4 @@
+// tslint:disable:only-arrow-functions
 import { person2 } from './03-functions2';
 
 describe('Typescript :: functions :: ', function () {

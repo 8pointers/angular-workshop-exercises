@@ -1,3 +1,4 @@
+// tslint:disable:only-arrow-functions
 describe('TypeScript :: arrays :: ', function () {
   const __: any = 'replace me so that the test is passing';
   it('should understand array literals', function () {
@@ -6,7 +7,7 @@ describe('TypeScript :: arrays :: ', function () {
   });
   it('should understand Array.from', function () {
     expect(Array.from('Hello')).toEqual(__);
-    expect(Array.from({ '0': 'First', '1': 'Second', '2': 'Third', '3': 'Fourth', '4': 'Fifth', length: 3 })).toEqual(__);
+    expect(Array.from({ 0: 'First', 1: 'Second', 2: 'Third', 3: 'Fourth', 4: 'Fifth', length: 3 })).toEqual(__);
     expect(Array.from({ length: 10 }, (_, i) => i)).toEqual(__);
   });
   it('should understand destructuring', function () {

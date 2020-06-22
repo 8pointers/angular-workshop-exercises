@@ -1,7 +1,8 @@
+// tslint:disable:only-arrow-functions
 describe('TypeScript :: Decorators :: ', function () {
   const __: any = 'replace me so that the test is passing';
   it('should understand method decorators', function () {
-    function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
+    function log(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<(...arguments: any) => any>) {
       const method = descriptor.value;
       descriptor.value = function (...args) {
         console.log('Invoking', propertyName, 'with arguments:', ...args);
@@ -24,7 +25,7 @@ describe('TypeScript :: Decorators :: ', function () {
   });
   it('should understand decorator factories', function () {
     function slow(durationInMillis: number) {
-      return function (target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
+      return function (target: any, propertyName: string, descriptor: TypedPropertyDescriptor<(...arguments: any) => any>) {
         const method = descriptor.value;
         descriptor.value = function (...args) {
           const tsStart = Date.now();

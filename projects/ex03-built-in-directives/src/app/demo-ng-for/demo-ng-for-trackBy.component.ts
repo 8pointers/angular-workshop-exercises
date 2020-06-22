@@ -1,25 +1,31 @@
 import { Component } from '@angular/core';
+
+const makePeople = (length, startId) =>
+  Array.from({ length })
+    .map((_, i) => startId + i)
+    .map(id => ({ id, name: `Name ${id}` }));
+
+@Component({ selector: 'app-id', template: '{{id}}' })
+export class IdComponent {
+  private static count = 0;
+  id = IdComponent.count++;
+}
+
 @Component({
   selector: 'app-demo-ng-for-track-by',
-  template: `
-    Without trackBy:
-    <div *ngFor="let person of people">
-      Person <span>{{ person.name }}</span>
-    </div>
-    With trackBy:
-    <div *ngFor="let person of people; trackBy: id">
-      Person <span>{{ person.name }}</span>
-    </div>
-  `
+  template: `<div *ngFor="let p of ps"><app-id></app-id> - {{ p.name }}</div>
+    <div *ngFor="let p of ps; trackBy: badId"><app-id></app-id> - {{ p.name }}</div>
+    <div *ngFor="let p of ps; trackBy: id"><app-id></app-id> - {{ p.name }}</div>`
 })
 export class DemoNgForTrackByComponent {
-  length = 5;
-  offset = 0;
+  ps = makePeople(10, 0);
+  drop = () => (this.ps = makePeople(this.ps.length - 1, 0));
+  // drop = () => (this.ps = makePeople(this.ps.length - 1, 10 - this.ps.length));
+  // drop = () => (this.ps = makePeople(this.ps.length, 0).sort(() => Math.random() - 0.5));
   constructor() {
-    setInterval(() => this.offset++, 2000); // Bad idea!!!
+    setInterval(this.drop, 2000); // Bad idea!!!
   }
-  get people() {
-    return Array.from({ length: this.length }, (_, i) => (this.offset + i) % this.length).map(id => ({ id, name: `Name ${id}` }));
-  }
-  id = name => name.id;
+  badId = index => index;
+  id = (_, person) => person.id;
+  trackBy = propertyName => (_, obj) => obj[propertyName];
 }
