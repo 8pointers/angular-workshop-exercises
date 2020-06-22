@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-demo-keyup',
-  template: `<input #txt (keyup)="onKeyUp($event)" /> {{ value }} {{ txt.value }}`
+  template: `
+    <input #txt1 (keyup)="sync($event.target.value)" /> {{ value }} {{ txt1.value }}
+    <br />
+    <input ref-txt2 /> {{ txt2.value }}
+    <br />
+    <input ref-txt3 (keyup)="(0)" /> {{ txt3.value }}
+  `
 })
 export class DemoKeyupComponent {
   value = '';
-
-  onKeyUp = event => (this.value = event.target.value);
+  sync = v => (this.value = v);
 }

@@ -2,15 +2,21 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-click-counter',
-  template: `
-    <p>
-      <button (click)="count()">Count</button> <br />
-      Clicked: {{ times }}
-    </p>
-  `
+  template: `<button (click)="increment()">Count</button>{{ times }}`
 })
 export class ClickCounterComponent {
-  times = 0;
-
-  count = () => this.times++;
+  private timesValue = 0;
+  get times() {
+    // this.timesValue++;
+    console.log('get', this.timesValue);
+    return this.timesValue;
+  }
+  set times(value) {
+    console.log('set', value);
+    this.timesValue = value;
+  }
+  increment() {
+    console.log('increment');
+    this.timesValue++;
+  }
 }

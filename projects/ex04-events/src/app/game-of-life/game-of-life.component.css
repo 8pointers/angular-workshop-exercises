@@ -1,12 +1,10 @@
 .grid {
   position: relative;
 }
-
 .cell {
   position: absolute;
   background-color: yellow;
 }
-
 .alive {
   background-color: blue;
 }
