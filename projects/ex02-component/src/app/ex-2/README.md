@@ -1,8 +1,13 @@
 ## Exercise 2
 
-Implement a component that displays a random message of the day (from a predefined list of messages):
+Create (usling angular-cli; see below and [https://angular.io/cli/generate](https://angular.io/cli/generate) for more info) and implement a message-of-the-day component that displays a random message of the day (from a predefined list of messages):
 
-```javascript
+```bash
+npm run generate component message-of-the-day -- \
+--inlineStyle=true --inlineTemplate=true --skipTests=true --project=ex02-component
+```
+
+```typescript
 const messages = [
   'They don’t make bugs like Bunny anymore.',
   'Talk is cheap. Show me the code.',

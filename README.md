@@ -34,7 +34,7 @@ Navigate to [http://localhost:4200/](http://localhost:4200/). The app will autom
 Creating a new component:
 
 ```bash
-npm run generate component message-of-the-day -- --project=ex01-component
+npm run generate component message-of-the-day -- --project=ex02-component
 ```
 
 ## Build
