@@ -1,7 +1,9 @@
 {
+  "angularKarmaTestExplorer.defaultAngularProjectName": "ex99-koans",
+  "editor.fontSize": 18,
   "editor.formatOnSave": true,
-  "angularKarmaTestExplorer.defaultAngularProjectName": "ex01-intro",
-  "testExplorer.errorDecoration": true,
+  "terminal.integrated.fontSize": 18,
+  "testExplorer.errorDecoration": false,
   "testExplorer.sort": "byLocation",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
