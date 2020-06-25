@@ -51,7 +51,7 @@ export class GameOfLifeComponent {
       .reduce((acc, [key, row, col, n]) => ({ ...acc, [key]: { key, row, col, count: ((acc[key] && acc[key].count) || 0) + n } }), {});
     this.isAlive = Object.values(neighbours)
       .filter(({ key, count }) => (this.isAlive[key] && count === 2) || count === 3)
-      .reduce((result, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
+      .reduce((result: object, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
   }
 
   get cells() {

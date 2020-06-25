@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 class Login {
   constructor(public username: string, public password: string) {}
@@ -9,13 +9,11 @@ class Login {
   styleUrls: ['./login.component.css'],
   templateUrl: './login.component.html'
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   model = new Login('', '');
 
   login() {
     alert(`Logging with ${this.model.username} ${this.model.password}`);
     this.model = new Login('', '');
   }
-
-  ngOnInit() {}
 }
