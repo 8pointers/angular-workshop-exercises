@@ -8,6 +8,7 @@ const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 
   styleUrls: ['./game-of-life.component.css'],
   template: `
     <div>
+      <button class="tick" (click)="tick()">Next</button>
       <div class="grid" [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }">
         <div
           *ngFor="let cell of cells"
@@ -21,7 +22,6 @@ const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 
           (click)="toggleCellState(cell.row, cell.column)"
         ></div>
       </div>
-      <button class="tick" (click)="tick()">Next</button>
     </div>
   `
 })
@@ -45,9 +45,11 @@ export class GameOfLifeComponent implements OnChanges {
     } else {
       this.isAlive[key] = [row, column];
     }
+    console.log(JSON.stringify(this.isAlive));
   }
 
   tick() {
+    console.log(JSON.stringify(this.isAlive));
     const neighbours = Object.values(this.isAlive)
       .flatMap(([row, col]) => deltas.map(([r, c, n]) => [cellKey(row + r, col + c), row + r, col + c, n]))
       .reduce((acc, [key, row, col, n]) => ({ ...acc, [key]: { key, row, col, count: ((acc[key] && acc[key].count) || 0) + n } }), {});
