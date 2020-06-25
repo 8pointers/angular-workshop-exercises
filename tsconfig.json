@@ -1,20 +1,101 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "lib": ["es2018", "esnext", "dom"]
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/ex00-new/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex00-new/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex01-intro/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex01-intro/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex02-component/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex02-component/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex03-built-in-directives/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex03-built-in-directives/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex04-events/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex04-events/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex05-data-binding/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex05-data-binding/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex06-forms/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex06-forms/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex07-routing/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex07-routing/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex08-service/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex08-service/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex09-directive/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex09-directive/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex10-rxjs/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex10-rxjs/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex11-async/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex11-async/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex12-ngrx/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex12-ngrx/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex13-ngrx-effects/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex13-ngrx-effects/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ex99-koans/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/ex99-koans/tsconfig.spec.json"
+    }
+  ]
 }
