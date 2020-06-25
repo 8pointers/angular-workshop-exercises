@@ -6,8 +6,7 @@ describe('TypeScript :: adventures in pointfree world :: ', function () {
   const mod = a => b => a % b;
   const gte = a => b => b >= a;
   const pick = propertyName => object => object[propertyName];
-  const isTruthy = x => !!x;
-  const not = f => x => !f(x);
+  const not = x => !x;
   const flip = f => a => b => f(b)(a);
   const map = f => xs => xs.map(f);
   const filter = f => xs => xs.filter(f);
@@ -30,10 +29,10 @@ describe('TypeScript :: adventures in pointfree world :: ', function () {
     };
     expect(getStreet(person)).toBe(__);
 
-    const isOdd = compose(isTruthy, flip(mod)(2));
+    const isOdd = compose(not, not, flip(mod)(2));
     expect(isOdd(123)).toBe(__);
     expect(isOdd(124)).toBe(__);
-    const isEven = not(isOdd);
+    const isEven = compose(not, isOdd);
     expect(isEven(123)).toBe(__);
     expect(isEven(124)).toBe(__);
   });
@@ -50,14 +49,17 @@ describe('TypeScript :: adventures in pointfree world :: ', function () {
     expect(getStreet(person)).toBe(__);
   });
   it('should understand pointfree - graduation', function () {
-    const overdraftAccountHolderNames = compose(map(pick('name')), filter(compose(not(gte(0)), pick('balance'))));
-    const accounts = [
-      { id: 1, name: 'First', balance: 123.45 },
-      { id: 1, name: 'Second', balance: 0 },
-      { id: 1, name: 'Third', balance: -12.34 },
-      { id: 1, name: 'Fourth', balance: 67.89 },
-      { id: 1, name: 'Fifth', balance: -1000 }
+    const accountHolderNamesInOverdraft = compose(
+      map(pick('name')),
+      filter(compose(compose(not, gte(0)), pick('balance'), pick('account')))
+    );
+    const people = [
+      { id: 1, name: 'First', account: { balance: 123.45 } },
+      { id: 2, name: 'Second', account: { balance: 0 } },
+      { id: 3, name: 'Third', account: { balance: -12.34 } },
+      { id: 4, name: 'Fourth', account: { balance: 67.89 } },
+      { id: 5, name: 'Fifth', account: { balance: -1000 } }
     ];
-    expect(overdraftAccountHolderNames(accounts)).toEqual(__);
+    expect(accountHolderNamesInOverdraft(people)).toEqual(__);
   });
 });
