@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 const cellKey = (row, column) => `${row}_${column}`;
 const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 3) - 1, i === 4 ? 0 : 1]);
@@ -11,7 +11,7 @@ const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 
       <div class="grid" [ngStyle]="{ width: n * width + 'px', height: n * height + 'px' }">
         <div
           *ngFor="let cell of cells"
-          [ngClass]="{ cell: true, alive: cell.isAlive }"
+          [ngClass]="{ cell: true, alive: isCellAlive(cell.row, cell.column) }"
           [ngStyle]="{
             top: height * cell.row + 'px',
             left: width * cell.column + 'px',
@@ -25,13 +25,15 @@ const deltas = Array.from({ length: 9 }, (_, i) => [Math.floor(i / 3) - 1, (i % 
     </div>
   `
 })
-export class GameOfLifeComponent {
+export class GameOfLifeComponent implements OnChanges {
   @Input()
   n: number;
   @Input()
   width: number;
   @Input()
   height: number;
+
+  cells: Array<{ row: number; column: number }>;
   isAlive = {};
 
   isCellAlive = (row, column) => this.isAlive[cellKey(row, column)] || false;
@@ -54,14 +56,13 @@ export class GameOfLifeComponent {
       .reduce((result: object, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
   }
 
-  get cells() {
-    return Array.from({ length: this.n * this.n }, (_, index) => ({
+  ngOnChanges(changes) {
+    if (!changes.n) {
+      return;
+    }
+    this.cells = Array.from({ length: this.n * this.n }, (_, index) => ({
       row: Math.floor(index / this.n),
       column: index % this.n
-    })).map(({ row, column }) => ({
-      row,
-      column,
-      isAlive: this.isCellAlive(row, column)
     }));
   }
 }
