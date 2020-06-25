@@ -109,13 +109,13 @@ describe('TypeScript :: arrays :: ', function () {
 
     const addUp = transactions =>
       Object.values(
-        transactions.reduce(
-          ({ [accountId]: current, ...rest }, { accountId, amount }) => ({
-            ...rest,
+        transactions.reduce((amountsByAccountId, { accountId, amount }) => {
+          const { [accountId]: current, ...others } = amountsByAccountId;
+          return {
+            ...others,
             [accountId]: { accountId, amount: amount + ((current && current.amount) || 0) }
-          }),
-          {}
-        )
+          };
+        }, {})
       );
     const someTransactions = [
       { id: 1, accountId: 1, amount: 10 },
