@@ -20,7 +20,7 @@ export class CounterComponent {
 
   decrement = () => this.store.dispatch(new Decrement());
 
-  constructor(private store: Store<{ count: number }>) {
+  constructor(private store: Store<{ counter: number }>) {
     this.count$ = store.pipe(select('counter'));
   }
 }
