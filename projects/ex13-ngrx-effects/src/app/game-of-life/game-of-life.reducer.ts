@@ -16,7 +16,7 @@ export function gameOfLifeReducer(state: any = {}, action: ActionsUnion) {
       .reduce((acc, [key, row, col, n]) => ({ ...acc, [key]: { key, row, col, count: ((acc[key] && acc[key].count) || 0) + n } }), {});
     return Object.values(neighbours)
       .filter(({ key, count }) => (state[key] && count === 2) || count === 3)
-      .reduce((result, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
+      .reduce((result: {[propName: string]: [number, number];}, { key, row, col }) => ({ ...result, [key]: [row, col] }), {});
   }
   return state;
 }
