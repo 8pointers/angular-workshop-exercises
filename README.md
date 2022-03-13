@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - git client
-- NodeJS 14.4.0+ & NPM 6.14.4+
+- NodeJS 14.15.1+ & NPM 6.14.8+
 - Recommended Visual Studio Code extensions:
   - [Angular/Karma Test Explorer](https://marketplace.visualstudio.com/items?itemName=raagh.angular-karma-test-explorer)
   - [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=angular.ng-template)
